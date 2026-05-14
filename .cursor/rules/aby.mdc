@@ -1,0 +1,12 @@
+---
+description: Mishri Kitchen uses the Aby design system for UI and styling
+alwaysApply: true
+---
+
+# Aby (project design)
+
+- **Design system name:** Aby — follow `.cursor/skills/aby/SKILL.md` for typography, color, motion, layout, and visual detail.
+- **Product spec:** Routes, content, CTAs, SEO, legal/business facts, and structure live in `.cursor/memory-bank/` (start with `projectbrief.md`, full detail in `PRD.md`).
+- **Conflict resolution:** Keep PRD facts exact (phone numbers, addresses, hours, links). For look-and-feel (fonts, decoration, motion, composition), **Aby** wins over older boilerplate choices in the codebase or PRD font examples unless you are explicitly aligning a section to a documented brand token the client locked in.
+
+When the user attaches or references the Aby skill, treat it as the same standard as this rule.

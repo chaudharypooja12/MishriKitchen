@@ -4,4 +4,6 @@
 
 **Stack:** Next.js (App Router), TypeScript, Tailwind; content in `src/data/*`; deploy on Vercel.
 
+**Design system (Aby):** Visual direction for this repo is **Aby** — see `.cursor/skills/aby/SKILL.md` and the always-on rule `.cursor/rules/aby.mdc`.
+
 **Full specification:** See [PRD.md](./PRD.md) for pages, components, design tokens, data file shapes, SEO, and launch checklist.
