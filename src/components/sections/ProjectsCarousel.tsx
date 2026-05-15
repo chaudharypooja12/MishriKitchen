@@ -40,10 +40,10 @@ export function ProjectsCarousel() {
   );
 
   const navBtnClass =
-    "rounded-full border border-wood/20 bg-surface p-3 text-wood shadow-md backdrop-blur-md transition hover:border-gold/50 hover:bg-surface-elevated hover:text-wood-dark active:scale-95";
+    "rounded-full border-2 border-teal-400/40 bg-white/90 p-3 text-teal-800 shadow-md transition hover:border-fuchsia-400/50 hover:bg-fuchsia-50 hover:text-fuchsia-900 active:scale-95";
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="section-band-teal py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <FadeIn className="max-w-xl">

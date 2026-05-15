@@ -84,7 +84,7 @@ export function CategoryCards() {
   }
 
   return (
-    <section className="border-y border-border bg-gradient-to-b from-bg-deep/40 to-transparent py-16 backdrop-blur-sm md:py-24">
+    <section className="section-band-violet border-y border-fuchsia-200/40 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader

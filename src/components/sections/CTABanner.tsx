@@ -5,8 +5,9 @@ import { CONTACT } from "@/lib/constants";
 export function CTABanner() {
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
-      <div className="absolute inset-0 bg-gradient-to-br from-wood-dark via-amber-900 to-stone-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_120%,rgba(212,168,75,0.28),transparent)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-950 via-orange-800 to-teal-900" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_20%_0%,rgba(251,191,36,0.35),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_90%_30%,rgba(192,38,211,0.2),transparent)]" />
       <div className="grain-overlay absolute inset-0 opacity-40" />
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
         <FadeIn>

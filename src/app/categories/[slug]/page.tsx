@@ -62,7 +62,7 @@ export default async function CategoryPage({
         />
       </section>
 
-      <section className="border-b border-border bg-surface/90 backdrop-blur-md">
+      <section className="section-band-amber border-b border-amber-200/40 bg-surface/90 backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           <Breadcrumb
             items={[

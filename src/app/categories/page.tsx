@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata("categories");
 export default function CategoriesIndexPage() {
   return (
     <div>
-      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
+      <section className="section-band-violet border-b border-violet-200/50 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[

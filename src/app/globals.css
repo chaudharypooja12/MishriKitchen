@@ -16,8 +16,10 @@
   --color-text: #2c1810;
   --color-text-muted: #5c4a42;
   --color-accent-violet: #6b4f7a;
-  --color-accent-fuchsia: #a8556d;
+  --color-accent-fuchsia: #c026d3;
   --color-accent-amber: #c9a227;
+  --color-accent-teal: #0d9488;
+  --color-accent-coral: #ea580c;
   --color-success: #2d6a4f;
   --color-whatsapp: #25d366;
   --radius-sm: 8px;
@@ -48,6 +50,8 @@
   --color-accent-violet: var(--color-accent-violet);
   --color-accent-fuchsia: var(--color-accent-fuchsia);
   --color-accent-amber: var(--color-accent-amber);
+  --color-accent-teal: var(--color-accent-teal);
+  --color-accent-coral: var(--color-accent-coral);
   --color-success: var(--color-success);
   --color-whatsapp: var(--color-whatsapp);
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
@@ -91,10 +95,10 @@
   pointer-events: none;
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 95% 60% at 10% -5%, rgba(212, 168, 75, 0.22), transparent 55%),
-    radial-gradient(ellipse 75% 50% at 92% 8%, rgba(139, 107, 74, 0.14), transparent 52%),
-    radial-gradient(ellipse 60% 45% at 88% 92%, rgba(92, 61, 46, 0.1), transparent 48%),
-    radial-gradient(ellipse 55% 50% at 5% 88%, rgba(45, 106, 79, 0.08), transparent 46%);
+    radial-gradient(ellipse 95% 60% at 10% -5%, rgba(212, 168, 75, 0.38), transparent 52%),
+    radial-gradient(ellipse 75% 50% at 92% 8%, rgba(192, 38, 211, 0.12), transparent 48%),
+    radial-gradient(ellipse 60% 45% at 88% 92%, rgba(13, 148, 136, 0.14), transparent 48%),
+    radial-gradient(ellipse 55% 50% at 5% 88%, rgba(234, 88, 12, 0.1), transparent 46%);
   animation: meshShift 22s ease-in-out infinite alternate;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -108,7 +112,7 @@
     transform: scale(1);
   }
   100% {
-    filter: saturate(1.06);
+    filter: saturate(1.12);
     transform: scale(1.02);
   }
 }
@@ -150,7 +154,40 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Carousel dots — light UI */
+/* Bold section tints — use on alternate sections */
+.section-band-amber {
+  background: linear-gradient(
+    180deg,
+    rgba(254, 243, 199, 0.55) 0%,
+    rgba(253, 230, 138, 0.2) 50%,
+    transparent 100%
+  );
+}
+.section-band-violet {
+  background: linear-gradient(
+    180deg,
+    rgba(237, 233, 254, 0.65) 0%,
+    rgba(221, 214, 254, 0.25) 45%,
+    transparent 100%
+  );
+}
+.section-band-teal {
+  background: linear-gradient(
+    180deg,
+    rgba(204, 251, 241, 0.55) 0%,
+    rgba(153, 246, 228, 0.22) 50%,
+    transparent 100%
+  );
+}
+.section-band-coral {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 237, 213, 0.7) 0%,
+    rgba(254, 215, 170, 0.28) 50%,
+    transparent 100%
+  );
+}
+
 .carousel-dot {
   width: 0.5rem;
   height: 0.5rem;

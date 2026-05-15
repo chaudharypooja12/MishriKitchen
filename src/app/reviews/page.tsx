@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata("reviews");
 export default function ReviewsPage() {
   return (
     <div>
-      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-24">
+      <section className="section-band-coral border-b border-orange-200/50 py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 text-center">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Reviews" }]}
@@ -23,7 +23,7 @@ export default function ReviewsPage() {
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-gold">
               Customer love
             </p>
-            <h1 className="mt-4 bg-gradient-to-br from-wood-dark via-wood to-gold bg-clip-text font-display text-5xl font-bold text-transparent md:text-6xl">
+            <h1 className="mt-4 bg-gradient-to-br from-fuchsia-600 via-orange-600 to-teal-600 bg-clip-text font-display text-5xl font-bold text-transparent md:text-6xl">
               4.8 / 5.0
             </h1>
             <StarRating className="mt-4 justify-center" />
@@ -39,7 +39,7 @@ export default function ReviewsPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {testimonialsPage.map((t, i) => (
             <FadeIn key={t.id} delay={(i % 9) * 0.03}>
-              <article className="glass-panel flex h-full flex-col p-6 transition hover:border-gold/30">
+              <article className="glass-panel flex h-full flex-col border-2 border-orange-200/60 p-6 transition hover:border-teal-400/50">
                 <StarRating value={t.rating} />
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-text">
                   &ldquo;{t.quote}&rdquo;

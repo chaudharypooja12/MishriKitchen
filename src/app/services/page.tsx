@@ -31,7 +31,7 @@ const iconMap: Record<string, LucideIcon> = {
 export default function ServicesPage() {
   return (
     <div>
-      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
+      <section className="section-band-amber border-b border-amber-200/50 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Services" }]}
@@ -53,11 +53,11 @@ export default function ServicesPage() {
           return (
             <FadeIn key={s.id} delay={i * 0.04}>
               <article className="glass-panel grid gap-10 p-8 md:grid-cols-[auto_1fr] md:p-10">
-                <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-gold/30 bg-gradient-to-br from-amber-50 to-orange-50/90 text-wood">
+                <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border-2 border-fuchsia-300/40 bg-gradient-to-br from-fuchsia-100 to-teal-100 text-teal-900">
                   <Icon className="size-8" />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-wood-dark md:text-3xl">
+                  <h2 className="font-display text-2xl font-bold text-fuchsia-950 md:text-3xl">
                     {s.title}
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-text-muted">
@@ -66,7 +66,7 @@ export default function ServicesPage() {
                   <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                     {s.features.map((f) => (
                       <li key={f} className="flex gap-2 text-sm text-text">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-gold to-wood shadow-[0_0_6px_rgba(201,162,39,0.45)]" />
+                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-fuchsia-500 to-teal-500" />
                         {f}
                       </li>
                     ))}

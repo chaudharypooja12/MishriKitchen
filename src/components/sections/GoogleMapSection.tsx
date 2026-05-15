@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/constants";
 
 export function GoogleMapSection() {
   return (
-    <section className="border-t border-border bg-bg-deep/30 py-16 backdrop-blur-sm md:py-20">
+    <section className="section-band-teal border-t border-teal-200/40 py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader
@@ -25,7 +25,7 @@ export function GoogleMapSection() {
         </div>
         <div className="glass-panel mt-8 flex flex-col items-start justify-between gap-6 p-6 md:flex-row md:items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-wood">
+            <p className="text-sm font-bold uppercase tracking-wide text-teal-800">
               Office
             </p>
             <p className="mt-1 text-sm text-text-muted">

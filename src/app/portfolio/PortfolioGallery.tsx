@@ -43,7 +43,7 @@ export function PortfolioGallery() {
 
   return (
     <div>
-      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
+      <section className="section-band-teal border-b border-teal-200/50 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Portfolio" }]}
@@ -69,8 +69,8 @@ export function PortfolioGallery() {
               className={cn(
                 "whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition",
                 filter === f
-                  ? "bg-gradient-to-r from-amber-700 to-wood text-[#fff8f0] shadow-md shadow-amber-900/20"
-                  : "border border-border bg-surface text-text-muted backdrop-blur-sm hover:border-gold/40 hover:text-wood",
+                  ? "bg-gradient-to-r from-fuchsia-600 to-teal-600 text-white shadow-lg shadow-fuchsia-900/25"
+                  : "border-2 border-teal-200/60 bg-white/90 text-text-muted backdrop-blur-sm hover:border-fuchsia-300/70 hover:text-fuchsia-900",
               )}
             >
               {f}
@@ -87,7 +87,7 @@ export function PortfolioGallery() {
                 type="button"
                 onClick={() => openAt(p.id)}
                 className={cn(
-                  "group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-border bg-surface text-left shadow-[var(--shadow-card)] backdrop-blur-sm transition hover:border-gold/35 hover:shadow-[var(--shadow-hover)]",
+                  "group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border-2 border-teal-200/50 bg-surface text-left shadow-[var(--shadow-card)] backdrop-blur-sm transition hover:border-fuchsia-300/60 hover:shadow-[var(--shadow-hover)]",
                   p.span === "wide" && "sm:col-span-2",
                 )}
               >
@@ -104,6 +104,9 @@ export function PortfolioGallery() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
+                  <span className="absolute left-2 top-2 z-[1] rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-teal-800 shadow-sm ring-1 ring-teal-200/80 md:text-xs">
+                    {p.type}
+                  </span>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition group-hover:opacity-100">
                     <p className="text-xs font-bold uppercase tracking-wide text-amber-200">

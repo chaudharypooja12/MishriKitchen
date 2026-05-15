@@ -39,14 +39,14 @@ function ServiceCard({ s, i }: { s: (typeof services)[0]; i: number }) {
           "hover:-translate-y-1 hover:border-gold/35 hover:shadow-[0_12px_40px_rgba(61,41,20,0.1)]",
         )}
       >
-        <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl border border-gold/30 bg-gradient-to-br from-amber-50 to-orange-50/80 text-wood transition group-hover:from-amber-100 group-hover:to-orange-100">
+        <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl border-2 border-teal-400/40 bg-gradient-to-br from-teal-100 to-fuchsia-100 text-teal-900 transition group-hover:from-teal-200 group-hover:to-fuchsia-200">
           <Icon className="size-6" />
         </div>
-        <h3 className="font-display text-xl font-bold text-text">{s.title}</h3>
+        <h3 className="font-display text-xl font-bold text-wood-dark">{s.title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-text-muted">
           {s.shortDesc}
         </p>
-        <span className="mt-4 text-sm font-semibold text-gold transition group-hover:text-wood-dark">
+        <span className="mt-4 text-sm font-semibold text-teal-700 transition group-hover:text-fuchsia-700">
           Learn more →
         </span>
       </Link>
@@ -78,7 +78,7 @@ export function ServicesGrid() {
   );
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="section-band-amber py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader

@@ -21,7 +21,7 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div className="grain-overlay">
-      <section className="relative border-b border-border py-16 md:py-24">
+      <section className="relative border-b border-fuchsia-200/40 bg-gradient-to-br from-amber-50 via-white to-teal-50 py-16 md:py-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&h=900&q=80&auto=format&fit=crop"
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-bg-deep/35 py-16 backdrop-blur-sm md:py-24">
+      <section className="border-y border-violet-200/40 section-band-violet py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
           <FadeIn>
             <SectionHeader
@@ -132,7 +132,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-bg-deep/40 py-16 backdrop-blur-sm md:py-24">
+      <section className="section-band-teal border-y border-teal-200/40 py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
           <FadeIn>
             <SectionHeader label="Journey" title="Milestones" align="center" className="mx-auto" />

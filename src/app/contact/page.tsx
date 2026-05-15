@@ -15,7 +15,7 @@ const hours = [
 export default function ContactPage() {
   return (
     <div>
-      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
+      <section className="section-band-teal border-b border-teal-200/50 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
@@ -34,8 +34,8 @@ export default function ContactPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="grid gap-6 md:grid-cols-3">
           <FadeIn>
-            <div className="glass-panel flex h-full flex-col p-8">
-              <span className="text-sm font-bold uppercase tracking-wider text-wood">
+            <div className="glass-panel flex h-full flex-col border-2 border-teal-200/50 p-8">
+              <span className="text-sm font-bold uppercase tracking-wider text-teal-800">
                 Visit us
               </span>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-text-muted">
@@ -51,8 +51,8 @@ export default function ContactPage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.05}>
-            <div className="glass-panel flex h-full flex-col p-8">
-              <span className="text-sm font-bold uppercase tracking-wider text-wood">
+            <div className="glass-panel flex h-full flex-col border-2 border-fuchsia-200/50 p-8">
+              <span className="text-sm font-bold uppercase tracking-wider text-fuchsia-800">
                 Call us
               </span>
               <div className="mt-4 flex-1 space-y-2 text-sm">
@@ -69,8 +69,8 @@ export default function ContactPage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <div className="glass-panel flex h-full flex-col p-8">
-              <span className="text-sm font-bold uppercase tracking-wider text-wood">
+            <div className="glass-panel flex h-full flex-col border-2 border-emerald-200/60 p-8">
+              <span className="text-sm font-bold uppercase tracking-wider text-emerald-800">
                 WhatsApp
               </span>
               <p className="mt-4 flex-1 text-sm text-text-muted">

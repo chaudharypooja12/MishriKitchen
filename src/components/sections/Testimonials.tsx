@@ -19,7 +19,7 @@ function TestimonialCard({
 }) {
   return (
     <FadeIn delay={i * 0.06}>
-      <article className="glass-panel flex h-full min-h-[240px] flex-col p-6 transition hover:border-gold/30 hover:shadow-[0_12px_36px_rgba(61,41,20,0.08)]">
+      <article className="glass-panel flex h-full min-h-[240px] flex-col border-2 border-fuchsia-100 p-6 transition hover:border-teal-300/50 hover:shadow-[0_12px_36px_rgba(13,148,136,0.12)]">
         <StarRating value={t.rating} />
         <p className="mt-4 flex-1 text-sm leading-relaxed text-text">
           &ldquo;{t.quote}&rdquo;
@@ -60,7 +60,7 @@ export function Testimonials() {
   );
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="section-band-coral py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader

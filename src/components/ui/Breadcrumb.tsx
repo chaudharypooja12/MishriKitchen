@@ -19,11 +19,11 @@ export function Breadcrumb({
       <ol className="flex flex-wrap items-center gap-2">
         {items.map((item, i) => (
           <li key={item.label} className="flex items-center gap-2">
-            {i > 0 && <span className="text-wood/25">/</span>}
+            {i > 0 && <span className="text-wood/40">/</span>}
             {item.href ? (
               <Link
                 href={item.href}
-                className="transition hover:text-wood hover:underline"
+                className="font-medium text-teal-800 transition hover:text-fuchsia-700 hover:underline"
               >
                 {item.label}
               </Link>
