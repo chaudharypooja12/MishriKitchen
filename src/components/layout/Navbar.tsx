@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { CONTACT } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 const primaryNav = [
@@ -56,9 +55,9 @@ export function Navbar() {
   }, [open]);
 
   const linkBase =
-    "rounded-full px-3 py-2 text-sm font-medium text-text-muted transition hover:bg-wood/5 hover:text-wood";
+    "rounded-full px-3 py-2 text-sm font-medium text-text-muted transition hover:bg-indigo-500/10 hover:text-wood";
   const linkActive =
-    "bg-gradient-to-r from-amber-50 to-orange-50/90 text-wood-dark shadow-sm ring-1 ring-gold/25";
+    "bg-gradient-to-r from-cyan-100/90 to-fuchsia-100/90 text-wood-dark shadow-sm ring-1 ring-cyan-400/35";
 
   return (
     <>
@@ -66,7 +65,7 @@ export function Navbar() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:py-4">
           <Link
             href="/"
-            className="font-display bg-gradient-to-r from-wood-dark via-wood to-gold bg-clip-text text-lg font-bold tracking-tight text-transparent md:text-xl"
+            className="font-display bg-gradient-to-r from-cyan-600 via-fuchsia-600 to-violet-700 bg-clip-text text-lg font-bold tracking-tight text-transparent md:text-xl"
           >
             Mishri Kitchen
           </Link>
@@ -93,7 +92,7 @@ export function Navbar() {
                 aria-expanded={catOpen}
               >
                 Categories
-                <ChevronDown className="size-4 opacity-70" />
+                <ChevronDown className="size-4 opacity-70" aria-hidden />
               </button>
               {catOpen && (
                 <div className="glass-panel absolute left-0 top-full z-50 mt-2 min-w-[240px] py-2 shadow-lg">
@@ -101,14 +100,14 @@ export function Navbar() {
                     <Link
                       key={c.href}
                       href={c.href}
-                      className="block px-4 py-2.5 text-sm text-text transition hover:bg-amber-50/80 hover:text-wood-dark"
+                      className="block px-4 py-2.5 text-sm text-text transition hover:bg-cyan-50/90 hover:text-wood-dark"
                     >
                       {c.label}
                     </Link>
                   ))}
                   <Link
                     href="/categories"
-                    className="block border-t border-border px-4 py-2.5 text-sm font-semibold text-gold transition hover:bg-amber-50/60"
+                    className="block border-t border-border px-4 py-2.5 text-sm font-semibold text-wood transition hover:bg-violet-50/80"
                   >
                     All categories
                   </Link>
@@ -126,29 +125,29 @@ export function Navbar() {
               </Link>
             ))}
 
-            <a
-              href={CONTACT.tel1}
-              className="ml-2 rounded-full bg-gradient-to-r from-amber-700 to-wood px-4 py-2 text-sm font-bold text-[#fff8f0] shadow-md shadow-amber-900/20 transition hover:brightness-110"
+            <Link
+              href="/contact"
+              className="ml-2 rounded-full bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-bold text-white shadow-md shadow-fuchsia-600/25 transition hover:brightness-110"
             >
-              Call Now
-            </a>
+              Book Free Appointment
+            </Link>
           </nav>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href={CONTACT.tel1}
-              className="rounded-full bg-gradient-to-r from-amber-700 to-wood px-3 py-2 text-xs font-bold text-[#fff8f0] shadow-md"
+            <Link
+              href="/contact"
+              className="rounded-full bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-violet-600 px-3 py-2 text-xs font-bold text-white shadow-md shadow-fuchsia-600/20"
             >
-              Call
-            </a>
+              Book
+            </Link>
             <button
               type="button"
-              className="rounded-full border border-wood/15 bg-surface p-2 text-text backdrop-blur-sm transition hover:bg-surface-elevated"
+              className="rounded-full border border-indigo-200/80 bg-white/90 p-2 text-wood shadow-sm backdrop-blur-sm transition hover:bg-indigo-50"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen(!open)}
             >
-              {open ? <X className="size-6" /> : <Menu className="size-6" />}
+              {open ? <X className="size-6" aria-hidden /> : <Menu className="size-6" aria-hidden />}
             </button>
           </div>
         </div>
@@ -171,13 +170,13 @@ export function Navbar() {
               onClick={() => setOpen(false)}
             />
             <div className="relative z-[1] flex min-h-0 flex-1 flex-col px-4 pb-[max(1rem,env(safe-area-inset-bottom,0px))] pt-[max(5.5rem,calc(env(safe-area-inset-top,0px)+4rem))]">
-              <div className="glass-panel mx-auto mt-2 flex max-h-[min(78vh,calc(100dvh-8rem))] w-full max-w-lg flex-col gap-1 overflow-y-auto rounded-2xl border-2 border-gold/30 p-3 shadow-2xl shadow-amber-900/15">
+              <div className="glass-panel mx-auto mt-2 flex max-h-[min(78vh,calc(100dvh-8rem))] w-full max-w-lg flex-col gap-1 overflow-y-auto overscroll-contain rounded-2xl border-2 border-cyan-400/35 p-3 shadow-2xl shadow-indigo-950/20">
                 {primaryNav.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="rounded-xl px-4 py-3.5 text-lg font-semibold text-wood-dark transition hover:bg-gradient-to-r hover:from-amber-100 hover:to-orange-50"
+                    className="rounded-xl px-4 py-3.5 text-lg font-semibold text-wood-dark transition hover:bg-gradient-to-r hover:from-cyan-100 hover:to-fuchsia-100"
                   >
                     {item.label}
                   </Link>
@@ -198,7 +197,7 @@ export function Navbar() {
                 <Link
                   href="/categories"
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-base font-bold text-amber-800 transition hover:bg-amber-100"
+                  className="rounded-xl px-4 py-3 text-base font-bold text-cyan-900 transition hover:bg-cyan-100"
                 >
                   All categories →
                 </Link>

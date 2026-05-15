@@ -50,7 +50,7 @@ export function ProjectsCarousel() {
             <SectionHeader
               label="Portfolio"
               title="Featured transformations"
-              subtitle="A glimpse of recent kitchens and interiors across Delhi."
+              subtitle="A glimpse of recent kitchens and interiors from 14+ years of Mishri work across Delhi."
             />
           </FadeIn>
           <div className="flex items-center justify-between gap-3 md:justify-end">

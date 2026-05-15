@@ -6,6 +6,7 @@ import {
   Flame,
   Layers,
   Ruler,
+  Scan,
   Sofa,
   type LucideIcon,
 } from "lucide-react";
@@ -26,6 +27,7 @@ const iconMap: Record<string, LucideIcon> = {
   Ruler,
   Layers,
   ClipboardList,
+  Scan,
 };
 
 export default function ServicesPage() {
@@ -42,7 +44,8 @@ export default function ServicesPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
             Modular kitchens, interiors, wardrobes, appliances, and the planning
-            discipline that holds it all together.
+            discipline that holds it all together — backed by 14+ years across Delhi
+            NCR.
           </p>
         </div>
       </section>

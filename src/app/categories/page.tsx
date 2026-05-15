@@ -27,7 +27,7 @@ export default function CategoriesIndexPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
             Explore how we design modular kitchens, full interiors, wardrobes, and
-            appliance packages.
+            appliance packages — 14+ years of Mishri execution in Delhi NCR.
           </p>
         </div>
       </section>

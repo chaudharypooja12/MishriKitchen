@@ -13,17 +13,17 @@ type Variant =
 
 const variants: Record<Variant, string> = {
   primary:
-    "inline-flex items-center justify-center rounded-full bg-gradient-to-r from-orange-600 via-amber-600 to-teal-700 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-orange-600/25 transition hover:brightness-110 hover:shadow-teal-700/20 active:scale-[0.98]",
+    "inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-violet-600 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-fuchsia-600/30 transition hover:brightness-110 hover:shadow-cyan-500/25 active:scale-[0.98]",
   secondary:
-    "inline-flex items-center justify-center rounded-full border-2 border-teal-600/35 bg-white/80 px-6 py-3 text-center text-sm font-semibold text-teal-900 backdrop-blur-sm transition hover:border-fuchsia-400/50 hover:bg-fuchsia-50/60 hover:shadow-md active:scale-[0.98]",
+    "inline-flex items-center justify-center rounded-full border-2 border-cyan-500/40 bg-white/85 px-6 py-3 text-center text-sm font-semibold text-indigo-950 backdrop-blur-sm transition hover:border-fuchsia-400/55 hover:bg-fuchsia-50/70 hover:shadow-md active:scale-[0.98]",
   gold:
-    "inline-flex items-center justify-center rounded-full bg-gradient-to-r from-gold to-gold-light px-6 py-3 text-center text-sm font-bold text-wood-dark shadow-lg shadow-amber-800/15 transition hover:brightness-110 active:scale-[0.98]",
+    "inline-flex items-center justify-center rounded-full bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-orange-500/25 transition hover:brightness-110 active:scale-[0.98]",
   ghost:
     "inline-flex items-center justify-center rounded-full border border-white/70 bg-white/40 px-6 py-3 text-center text-sm font-semibold text-wood-dark shadow-sm backdrop-blur-md transition hover:bg-white/65 hover:shadow-md active:scale-[0.98]",
   whatsapp:
     "inline-flex items-center justify-center rounded-full bg-whatsapp px-6 py-3 text-center text-sm font-bold text-white shadow-lg shadow-emerald-700/25 transition hover:brightness-110 active:scale-[0.98]",
   outlineGold:
-    "inline-flex items-center justify-center rounded-full border-2 border-gold/80 bg-transparent px-6 py-3 text-center text-sm font-semibold text-wood-dark transition hover:bg-amber-50 hover:shadow-md active:scale-[0.98]",
+    "inline-flex items-center justify-center rounded-full border-2 border-violet-400/70 bg-white/70 px-6 py-3 text-center text-sm font-semibold text-wood-dark transition hover:bg-violet-50 hover:shadow-md active:scale-[0.98]",
   link: "inline-flex text-sm font-semibold text-teal-700 underline-offset-4 transition hover:text-fuchsia-700 hover:underline",
 };
 

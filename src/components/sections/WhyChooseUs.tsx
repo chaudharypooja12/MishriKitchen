@@ -11,6 +11,7 @@ export function WhyChooseUs() {
           <SectionHeader
             label="Why Mishri"
             title="Why families choose us"
+            subtitle="Four pillars we have sharpened over 14+ years of live projects in Delhi NCR."
             align="center"
             className="mx-auto"
           />

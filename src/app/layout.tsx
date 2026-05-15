@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Mishri Kitchen",
   },
   description:
-    "Mishri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 10+ years experience, 100+ projects. Call now.",
+    "Mishri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 14+ years of experience, 100+ projects. Book a free consultation.",
   openGraph: {
     type: "website",
     locale: "en_IN",

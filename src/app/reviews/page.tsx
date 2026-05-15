@@ -28,8 +28,8 @@ export default function ReviewsPage() {
             </h1>
             <StarRating className="mt-4 justify-center" />
             <p className="mx-auto mt-4 max-w-xl text-text-muted">
-              Based on 100+ completed projects — trusted by families across Delhi
-              NCR.
+              Based on 100+ completed projects and 14+ years of experience — trusted
+              by families across Delhi NCR.
             </p>
           </FadeIn>
         </div>
@@ -84,8 +84,8 @@ export default function ReviewsPage() {
           Join 100+ happy families
         </h2>
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <Button href={CONTACT.tel1} variant="primary">
-            Call now
+          <Button href="/contact" variant="primary">
+            Book Free Appointment
           </Button>
           <Button href={CONTACT.whatsapp} variant="whatsapp">
             WhatsApp us

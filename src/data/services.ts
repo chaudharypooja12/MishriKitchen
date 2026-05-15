@@ -106,4 +106,18 @@ export const services: Service[] = [
       "Snag-free handover",
     ],
   },
+  {
+    id: "visualisation",
+    icon: "Scan",
+    title: "3D Visualisation",
+    shortDesc: "Realistic renders before fabrication",
+    description:
+      "Photorealistic views and detailed working drawings so you can approve finishes, lighting, and storage before fabrication begins.",
+    features: [
+      "Kitchen & wardrobe 3D walkthroughs",
+      "Material-accurate colour previews",
+      "Shop drawings for site teams",
+      "Built-in revision rounds",
+    ],
+  },
 ];

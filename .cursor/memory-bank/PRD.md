@@ -28,7 +28,7 @@
 
 ### What We Are Building
 
-A **premium static informational website** for Mishri Kitchen & Home Interior — a modular kitchen and home interior brand based in New Delhi with 10+ years of experience.
+A **premium static informational website** for Mishri Kitchen & Home Interior — a modular kitchen and home interior brand based in New Delhi with 14+ years of experience.
 
 ### Primary Goals
 
@@ -58,7 +58,7 @@ Vercel — free hobby tier is sufficient for this static site.
 |---|---|
 | **Brand Name** | Mishri Kitchen & Home Interior |
 | **Managing Director** | Sandeep Singh |
-| **Experience** | 10+ years |
+| **Experience** | 14+ years |
 | **Primary Phone** | +91 9718499747 |
 | **Secondary Phone** | +91 9650656670 |
 | **WhatsApp** | +91 9718499747 |
@@ -115,7 +115,7 @@ Hamburger menu → full-screen overlay with same links + sticky bottom CTA bar a
 **Content:**
 ```
 Headline:      Crafting Premium Kitchens & Interiors That Feel Like Home
-Subheadline:   10+ years of creating modular kitchens and elegant living spaces
+Subheadline:   14+ years of creating modular kitchens and elegant living spaces
                across Delhi NCR
 ```
 
@@ -127,7 +127,7 @@ Subheadline:   10+ years of creating modular kitchens and elegant living spaces
 **Stats Row (floating bar at bottom of hero):**
 | Stat | Label |
 |---|---|
-| 10+ | Years Experience |
+| 14+ | Years Experience |
 | 100+ | Projects Completed |
 | 50+ | Happy Families |
 | 100% | Custom Designs |
@@ -206,7 +206,7 @@ CTA below carousel: "View All Projects →" → `/portfolio`
 
 | Heading | Body |
 |---|---|
-| Expert Team | 10+ years crafting kitchens and interiors across Delhi |
+| Expert Team | 14+ years crafting kitchens and interiors across Delhi |
 | Premium Materials | Only ISI-certified ply, hardware & branded finishes |
 | Fully Custom | Every design is made to your space and taste |
 | End-to-End | Design, supply, install — one team, zero stress |
@@ -584,8 +584,8 @@ Example: `L-shaped modular kitchen in white laminate - Mishri Kitchen & Home Int
 
 | Page | Title | Description |
 |---|---|---|
-| Home | Premium Modular Kitchen & Home Interiors in Delhi | Mishri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 10+ years experience, 100+ projects. Call now. |
-| About | About Us — Mishri Kitchen & Home Interior Delhi | Learn about Mishri Kitchen's 10-year journey designing premium modular kitchens and home interiors across Delhi NCR. |
+| Home | Premium Modular Kitchen & Home Interiors in Delhi | Mishri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 14+ years of experience, 100+ projects. Call now. |
+| About | About Us — Mishri Kitchen & Home Interior Delhi | Learn about Mishri Kitchen's 14-year journey designing premium modular kitchens and home interiors across Delhi NCR. |
 | Services | Modular Kitchen & Interior Design Services — Delhi | Explore our modular kitchen, wardrobe, interior design, appliance & project management services in New Delhi. |
 | Portfolio | Kitchen & Interior Portfolio — Mishri Kitchen Delhi | Browse our completed modular kitchen and home interior projects across Delhi NCR. |
 | Categories/Modular | Modular Kitchen Designs — L-shape, U-shape, Island | Premium modular kitchen designs in Delhi. L-shaped, U-shaped, island, parallel & luxury kitchens. Custom quotes available. |

@@ -5,14 +5,14 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function AboutPreview() {
   return (
-    <section className="grain-overlay section-band-coral border-y border-orange-200/50 py-16 backdrop-blur-sm md:py-24">
+    <section className="grain-overlay section-band-violet border-y border-violet-200/50 py-16 backdrop-blur-sm md:py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2 md:gap-16">
         <FadeIn>
           <div className="glass-panel relative aspect-[4/5] overflow-hidden p-1">
             <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-xl)-4px)]">
               <Image
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&h=1100&q=80&auto=format&fit=crop"
-                alt="Interior showroom kitchen detail - Mishri Kitchen & Home Interior"
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=1100&q=80&auto=format&fit=crop"
+                alt="Bright open-plan living and kitchen interior by Mishri Kitchen & Home Interior, Delhi NCR"
                 fill
                 className="object-cover transition duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -37,7 +37,7 @@ export function AboutPreview() {
             <li className="flex gap-3">
               <span className="mt-1 size-2 shrink-0 rounded-full bg-gradient-to-br from-fuchsia-500 to-orange-400 shadow-sm" />
               <span>
-                <strong className="text-text">10+ years on ground</strong> in
+                <strong className="text-text">14+ years on ground</strong> in
                 Paschim Vihar and across Delhi NCR.
               </span>
             </li>

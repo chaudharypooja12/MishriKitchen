@@ -79,6 +79,10 @@ export default async function CategoryPage({
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted">
             {category.description}
           </p>
+          <p className="mt-3 text-sm font-semibold text-wood">
+            14+ years designing and installing {category.title.toLowerCase()} across
+            Delhi NCR.
+          </p>
         </div>
       </section>
 

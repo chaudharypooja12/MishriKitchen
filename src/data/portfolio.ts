@@ -24,12 +24,12 @@ const u = (id: string, w = 800, h = 600) =>
 export const portfolioItems: PortfolioItem[] = [
   {
     id: "p1",
-    title: "Warm L-shaped kitchen",
+    title: "Sleek island kitchen",
     location: "Paschim Vihar",
     type: "Modular Kitchen",
     filter: "Kitchens",
-    image: u("photo-1556909114-f6e7ad7d3136"),
-    description: "Two-tone laminate with quartz counter and tall storage wall.",
+    image: u("photo-1600585154526-990dced4db0d", 800, 600),
+    description: "Island layout with waterfall quartz and integrated lighting.",
     span: "wide",
   },
   {
@@ -47,7 +47,7 @@ export const portfolioItems: PortfolioItem[] = [
     location: "Punjabi Bagh",
     type: "Living Room",
     filter: "Living Rooms",
-    image: u("photo-1600210491892-03d3c3494bfd"),
+    image: u("photo-1586023492125-27b2c045efd7"),
     description: "Panelled TV wall, soft lighting, and oak accents.",
     span: "tall",
   },

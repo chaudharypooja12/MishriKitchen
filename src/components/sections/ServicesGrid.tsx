@@ -8,6 +8,7 @@ import {
   Flame,
   Layers,
   Ruler,
+  Scan,
   Sofa,
   type LucideIcon,
 } from "lucide-react";
@@ -26,6 +27,7 @@ const iconMap: Record<string, LucideIcon> = {
   Ruler,
   Layers,
   ClipboardList,
+  Scan,
 };
 
 function ServiceCard({ s, i }: { s: (typeof services)[0]; i: number }) {
@@ -84,7 +86,7 @@ export function ServicesGrid() {
           <SectionHeader
             label="Services"
             title="Everything your kitchen and home needs"
-            subtitle="Seven focused disciplines — from first sketch to final handover."
+            subtitle="Eight focused disciplines — from first sketch to final handover — refined over 14+ years in Delhi NCR."
             align="center"
             className="mx-auto"
           />

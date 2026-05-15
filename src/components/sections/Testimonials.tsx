@@ -66,7 +66,7 @@ export function Testimonials() {
           <SectionHeader
             label="Testimonials"
             title="Loved across Delhi NCR"
-            subtitle="Real feedback from homeowners who trusted Mishri with their spaces."
+            subtitle="Real feedback from homeowners who trusted Mishri with their spaces — 14+ years of referrals and repeat families."
             align="center"
             className="mx-auto"
           />

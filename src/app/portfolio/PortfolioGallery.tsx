@@ -53,8 +53,8 @@ export function PortfolioGallery() {
             Portfolio
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
-            Kitchens, living spaces, wardrobes, and more — delivered with Mishri
-            rigour.
+            Kitchens, living spaces, wardrobes, and more — 14+ years of Mishri
+            rigour across Delhi NCR.
           </p>
         </div>
       </section>

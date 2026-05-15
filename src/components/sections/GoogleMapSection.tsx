@@ -11,7 +11,7 @@ export function GoogleMapSection() {
           <SectionHeader
             label="Visit"
             title="Find us in Paschim Vihar"
-            subtitle="Walk-ins welcome Mon–Sat. Call ahead for Sunday appointments."
+            subtitle="Walk-ins welcome Mon–Sat. Call ahead for Sunday appointments. 14+ years serving Paschim Vihar and Delhi NCR."
           />
         </FadeIn>
         <div className="glass-panel mt-10 overflow-hidden p-1">

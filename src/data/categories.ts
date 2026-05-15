@@ -30,7 +30,7 @@ export const categories: Category[] = [
     description:
       "From compact parallel kitchens to statement islands — engineered for Delhi homes with durable materials and refined detailing.",
     accent: "ember",
-    heroImage: img("photo-1556909114-f6e7ad7d3136"),
+    heroImage: img("photo-1600585154526-990dced4db0d"),
     subcategories: [
       {
         id: "l-shaped",
@@ -120,7 +120,7 @@ export const categories: Category[] = [
     description:
       "Living, dining, bedrooms, and studies — cohesive palettes, lighting layers, and crafted joinery.",
     accent: "moss",
-    heroImage: img("photo-1600210491892-03d3c3494bfd"),
+    heroImage: img("photo-1600585154340-be6161a56a0c"),
     subcategories: [
       {
         id: "living",

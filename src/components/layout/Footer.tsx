@@ -17,11 +17,12 @@ export function Footer() {
     <footer className="grain-overlay relative mt-auto border-t border-border bg-gradient-to-b from-surface/90 to-bg-deep/95 backdrop-blur-xl">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display bg-gradient-to-r from-wood-dark via-wood to-gold bg-clip-text text-xl font-bold text-transparent">
+          <p className="font-display bg-gradient-to-r from-cyan-600 via-fuchsia-600 to-violet-700 bg-clip-text text-xl font-bold text-transparent">
             Mishri Kitchen
           </p>
           <p className="mt-3 text-sm leading-relaxed text-text-muted">
-            Premium modular kitchens & home interiors across Delhi NCR.
+            Premium modular kitchens & home interiors across Delhi NCR — 14+ years
+            of Mishri delivery.
           </p>
           <div className="mt-4 flex flex-col gap-1 text-sm">
             <a className="text-wood transition hover:text-gold hover:underline" href={CONTACT.tel1}>

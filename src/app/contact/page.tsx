@@ -26,7 +26,7 @@ export default function ContactPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
             No forms — reach us directly by phone, WhatsApp, or visit our Paschim
-            Vihar studio.
+            Vihar studio. 14+ years of modular kitchen & interior experience.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 </a>
               </div>
               <Button href={CONTACT.tel1} variant="primary" className="mt-6">
-                Call now
+                Tap to call
               </Button>
             </div>
           </FadeIn>
@@ -120,14 +120,17 @@ export default function ContactPage() {
           />
         </div>
 
-        <div className="glass-panel mt-16 bg-gradient-to-br from-wood-dark/90 via-amber-900/85 to-stone-900/90 p-10 text-center">
-          <h2 className="font-display text-3xl font-bold text-[#fffaf5]">
+        <div className="glass-panel mt-16 overflow-hidden border border-cyan-400/25 bg-gradient-to-br from-indigo-950 via-violet-900 to-cyan-950 p-10 text-center shadow-[0_0_48px_rgba(99,102,241,0.25)]">
+          <h2 className="font-display text-3xl font-bold text-white">
             Ready to start your project?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-amber-50/95">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-indigo-100/95">
             Our team is available Mon–Sat, 10 AM – 7 PM. Walk in or call ahead.
           </p>
           <div className="mt-8 flex flex-col flex-wrap justify-center gap-4 sm:flex-row">
+            <Button href="/contact" variant="primary">
+              Book Free Appointment
+            </Button>
             <Button href={CONTACT.tel1} variant="gold">
               Call {CONTACT.phone1_display}
             </Button>

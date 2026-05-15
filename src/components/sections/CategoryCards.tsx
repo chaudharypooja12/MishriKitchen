@@ -90,7 +90,7 @@ export function CategoryCards() {
           <SectionHeader
             label="Explore"
             title="Signature categories"
-            subtitle="Deep expertise across kitchens, full interiors, wardrobes, and appliances."
+            subtitle="Deep expertise across kitchens, full interiors, wardrobes, and appliances — 14+ years in Delhi NCR."
             align="center"
             className="mx-auto"
           />

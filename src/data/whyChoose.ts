@@ -1,7 +1,7 @@
 export const whyChoose = [
   {
     title: "Expert Team",
-    body: "10+ years crafting kitchens and interiors across Delhi with site-smart supervision.",
+    body: "14+ years crafting kitchens and interiors across Delhi with site-smart supervision.",
   },
   {
     title: "Premium Materials",

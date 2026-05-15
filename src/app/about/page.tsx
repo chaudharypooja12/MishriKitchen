@@ -21,13 +21,13 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div className="grain-overlay">
-      <section className="relative border-b border-fuchsia-200/40 bg-gradient-to-br from-amber-50 via-white to-teal-50 py-16 md:py-24">
+      <section className="relative border-b border-fuchsia-200/40 bg-gradient-to-br from-cyan-50 via-white to-violet-50 py-16 md:py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&h=900&q=80&auto=format&fit=crop"
-            alt="About Mishri Kitchen & Home Interior"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&h=900&q=80&auto=format&fit=crop"
+            alt="Contemporary home interior and open kitchen by Mishri Kitchen & Home Interior"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-45"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/92 to-background" />
@@ -159,7 +159,7 @@ export default function AboutPage() {
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
           {heroStats.map((s) => (
             <div key={s.label} className="glass-panel p-6 text-center">
-              <p className="font-display bg-gradient-to-br from-wood-dark to-gold bg-clip-text text-3xl font-bold text-transparent">
+              <p className="font-display bg-gradient-to-br from-cyan-600 via-fuchsia-600 to-violet-700 bg-clip-text text-3xl font-bold text-transparent">
                 {s.value}
               </p>
               <p className="mt-1 text-sm text-text-muted">{s.label}</p>
@@ -168,17 +168,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-gradient-to-r from-wood-dark via-amber-900 to-stone-900 py-16 text-center md:py-20">
+      <section className="border-t border-border bg-gradient-to-r from-indigo-950 via-violet-900 to-cyan-950 py-16 text-center md:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-3xl font-bold text-[#fffaf5] md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
             Let&apos;s build something beautiful together
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button href={CONTACT.tel1} variant="gold">
-              Call {CONTACT.phone1_display}
+            <Button href="/contact" variant="primary">
+              Book Free Appointment
             </Button>
             <Button href={CONTACT.whatsapp} variant="whatsapp">
               WhatsApp
+            </Button>
+            <Button href={CONTACT.tel1} variant="gold">
+              Call {CONTACT.phone1_display}
             </Button>
           </div>
         </div>
