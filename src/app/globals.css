@@ -1,39 +1,40 @@
 @import "tailwindcss";
 
-/* Dark glass design system — semantic aliases (wood/gold) map to neon-friendly primaries */
+/* Aby — bright premium wood: warm neutrals, real wood/brass tokens, light glass */
 :root {
-  --color-bg: #060912;
-  --color-surface: rgba(255, 255, 255, 0.06);
-  --color-surface-elevated: rgba(255, 255, 255, 0.1);
-  --color-border: rgba(255, 255, 255, 0.12);
-  --color-wood: #22d3ee;
-  --color-wood-dark: #06b6d4;
-  --color-wood-light: #67e8f9;
-  --color-beige: rgba(167, 139, 250, 0.12);
-  --color-gold: #fbbf24;
-  --color-gold-light: #fde68a;
-  --color-text: #f1f5f9;
-  --color-text-muted: #94a3b8;
-  --color-accent-violet: #a78bfa;
-  --color-accent-fuchsia: #e879f9;
-  --color-accent-amber: #fbbf24;
-  --color-success: #34d399;
+  --color-bg: #faf6f0;
+  --color-bg-deep: #f0e8dc;
+  --color-surface: rgba(255, 255, 255, 0.72);
+  --color-surface-elevated: rgba(255, 252, 248, 0.92);
+  --color-border: rgba(61, 41, 20, 0.1);
+  --color-wood: #5c3d2e;
+  --color-wood-dark: #3d2914;
+  --color-wood-light: #8b6b4a;
+  --color-beige: rgba(201, 162, 39, 0.12);
+  --color-gold: #b8860b;
+  --color-gold-light: #d4a84b;
+  --color-text: #2c1810;
+  --color-text-muted: #5c4a42;
+  --color-accent-violet: #6b4f7a;
+  --color-accent-fuchsia: #a8556d;
+  --color-accent-amber: #c9a227;
+  --color-success: #2d6a4f;
   --color-whatsapp: #25d366;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-2xl: 32px;
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
-  --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.45);
-  --shadow-glow-cyan: 0 0 40px rgba(34, 211, 238, 0.25);
-  --shadow-glow-violet: 0 0 40px rgba(167, 139, 250, 0.2);
+  --shadow-card: 0 4px 24px rgba(61, 41, 20, 0.08);
+  --shadow-hover: 0 20px 48px rgba(61, 41, 20, 0.12);
+  --shadow-glow-cyan: 0 0 32px rgba(201, 162, 39, 0.2);
+  --shadow-glow-violet: 0 0 28px rgba(107, 79, 122, 0.12);
 }
 
 @theme inline {
   --color-background: var(--color-bg);
+  --color-bg-deep: var(--color-bg-deep);
   --color-surface: var(--color-surface);
-  --color-surface-elevated: var(--color-surface-elevated);
   --color-surface-elevated: var(--color-surface-elevated);
   --color-border: var(--color-border);
   --color-wood: var(--color-wood);
@@ -55,15 +56,15 @@
 
 @layer base {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
-    background: transparent;
+    background: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
   }
   :focus-visible {
-    outline: 2px solid var(--color-wood);
+    outline: 2px solid var(--color-wood-dark);
     outline-offset: 3px;
   }
 }
@@ -76,7 +77,7 @@
   font-family: var(--font-display);
 }
 
-/* Animated mesh backdrop (fixed layer) */
+/* Warm wood-wash mesh (fixed layer) */
 .mesh-bg {
   position: relative;
   isolation: isolate;
@@ -90,11 +91,11 @@
   pointer-events: none;
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 90% 55% at 15% -10%, rgba(34, 211, 238, 0.28), transparent 55%),
-    radial-gradient(ellipse 70% 45% at 95% 5%, rgba(167, 139, 250, 0.22), transparent 50%),
-    radial-gradient(ellipse 55% 40% at 85% 95%, rgba(232, 121, 249, 0.14), transparent 45%),
-    radial-gradient(ellipse 50% 45% at 5% 85%, rgba(251, 191, 36, 0.12), transparent 45%);
-  animation: meshShift 20s ease-in-out infinite alternate;
+    radial-gradient(ellipse 95% 60% at 10% -5%, rgba(212, 168, 75, 0.22), transparent 55%),
+    radial-gradient(ellipse 75% 50% at 92% 8%, rgba(139, 107, 74, 0.14), transparent 52%),
+    radial-gradient(ellipse 60% 45% at 88% 92%, rgba(92, 61, 46, 0.1), transparent 48%),
+    radial-gradient(ellipse 55% 50% at 5% 88%, rgba(45, 106, 79, 0.08), transparent 46%);
+  animation: meshShift 22s ease-in-out infinite alternate;
 }
 @media (prefers-reduced-motion: reduce) {
   .mesh-bg::before {
@@ -103,26 +104,26 @@
 }
 @keyframes meshShift {
   0% {
-    filter: hue-rotate(0deg) saturate(1);
+    filter: saturate(1);
     transform: scale(1);
   }
   100% {
-    filter: hue-rotate(12deg) saturate(1.08);
-    transform: scale(1.03);
+    filter: saturate(1.06);
+    transform: scale(1.02);
   }
 }
 
 .glass-panel {
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(61, 41, 20, 0.08);
   background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.04) 100%
+    145deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 252, 248, 0.55) 100%
   );
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .glass-panel--sm {
@@ -130,11 +131,11 @@
 }
 
 .glass-nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(6, 9, 18, 0.65);
+  border-bottom: 1px solid rgba(61, 41, 20, 0.08);
+  background: rgba(255, 252, 248, 0.78);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 24px rgba(61, 41, 20, 0.06);
 }
 
 .grain-overlay {
@@ -145,20 +146,27 @@
   pointer-events: none;
   position: absolute;
   inset: 0;
-  opacity: 0.035;
+  opacity: 0.045;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Carousel dots helper */
+/* Carousel dots — light UI */
 .carousel-dot {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(61, 41, 20, 0.2);
   transition: transform 0.2s, background 0.2s;
 }
 .carousel-dot--active {
   background: var(--color-wood);
   transform: scale(1.25);
-  box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+  box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.35);
+}
+
+/* Lightbox — warm backdrop on bright site */
+.yarl__portal {
+  --yarl__color_backdrop: rgba(44, 24, 16, 0.92);
+  --yarl__color_button: rgba(255, 250, 245, 0.9);
+  --yarl__color_button_active: #fff;
 }

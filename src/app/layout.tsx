@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${plusJakarta.variable} h-full scroll-smooth bg-[#060912] antialiased`}
+      className={`${syne.variable} ${plusJakarta.variable} h-full scroll-smooth bg-background antialiased`}
     >
       <body className="font-body min-h-full text-text">
         <JsonLd />

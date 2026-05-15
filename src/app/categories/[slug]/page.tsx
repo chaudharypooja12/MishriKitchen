@@ -6,6 +6,8 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { CONTACT } from "@/lib/constants";
 import { categories } from "@/data/categories";
+import { categoryAccentClass } from "@/lib/categoryAccent";
+import { cn } from "@/lib/utils";
 import { pageMetadata, type SeoKey } from "@/data/seo";
 
 const slugToSeo: Record<string, SeoKey> = {
@@ -39,9 +41,11 @@ export default async function CategoryPage({
   const category = categories.find((c) => c.slug === slug);
   if (!category) notFound();
 
+  const accent = categoryAccentClass[category.accent];
+
   return (
     <div>
-      <section className="relative h-[42vh] min-h-[280px] border-b border-white/10">
+      <section className="relative h-[42vh] min-h-[280px] border-b border-border">
         <Image
           src={category.heroImage}
           alt={`${category.title} - Mishri Kitchen & Home Interior`}
@@ -50,10 +54,15 @@ export default async function CategoryPage({
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-violet-900/30" />
+        <div
+          className={cn(
+            "absolute inset-0 bg-gradient-to-t to-transparent",
+            accent.overlay,
+          )}
+        />
       </section>
 
-      <section className="border-b border-white/10 bg-slate-950/50 backdrop-blur-md">
+      <section className="border-b border-border bg-surface/90 backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           <Breadcrumb
             items={[
@@ -63,10 +72,10 @@ export default async function CategoryPage({
             ]}
             className="mb-6"
           />
-          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-wood-dark md:text-5xl">
             {category.title}
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-amber-300">{category.tagline}</p>
+          <p className="mt-3 max-w-2xl text-lg font-medium text-gold">{category.tagline}</p>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted">
             {category.description}
           </p>
@@ -94,24 +103,24 @@ export default async function CategoryPage({
                   </div>
                 </div>
                 <div>
-                  <h2 className="font-display text-3xl font-bold text-cyan-100">
+                  <h2 className="font-display text-3xl font-bold text-wood-dark">
                     {sub.name}
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-text-muted">
                     {sub.description}
                   </p>
-                  <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-fuchsia-300">
+                  <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-wood">
                     Benefits
                   </h3>
                   <ul className="mt-3 space-y-2">
                     {sub.benefits.map((b) => (
                       <li key={b} className="flex gap-2 text-sm text-text">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-fuchsia-500" />
+                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-gold to-wood" />
                         {b}
                       </li>
                     ))}
                   </ul>
-                  <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-fuchsia-300">
+                  <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-wood">
                     Materials
                   </h3>
                   <ul className="mt-3 space-y-2">

@@ -8,6 +8,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 import { categories } from "@/data/categories";
+import { categoryAccentClass } from "@/lib/categoryAccent";
 import { cn } from "@/lib/utils";
 
 export function CategoryCards() {
@@ -42,11 +43,16 @@ export function CategoryCards() {
     i: number;
     className?: string;
   }) {
+    const a = categoryAccentClass[cat.accent];
     return (
       <FadeIn delay={i * 0.06}>
         <Link
           href={`/categories/${cat.slug}`}
-          className={`group relative block min-h-[220px] overflow-hidden rounded-2xl border border-white/10 shadow-[var(--shadow-hover)] transition hover:border-cyan-400/30 md:min-h-[260px] ${className ?? ""}`}
+          className={cn(
+            "group relative block min-h-[220px] overflow-hidden rounded-2xl border-2 border-transparent bg-white/30 shadow-[var(--shadow-hover)] transition md:min-h-[260px]",
+            a.border,
+            className,
+          )}
         >
           <Image
             src={cat.heroImage}
@@ -55,13 +61,20 @@ export function CategoryCards() {
             className="object-cover transition duration-700 group-hover:scale-105"
             sizes="(max-width: 768px) 90vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-violet-900/30" />
+          <div
+            className={cn(
+              "absolute inset-0 bg-gradient-to-t to-transparent",
+              a.overlay,
+            )}
+          />
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-            <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+            <h3 className="font-display text-2xl font-bold text-white drop-shadow md:text-3xl">
               {cat.title}
             </h3>
-            <p className="mt-2 max-w-md text-sm text-cyan-100/90">{cat.tagline}</p>
-            <span className="mt-4 inline-flex text-sm font-bold text-amber-300">
+            <p className={cn("mt-2 max-w-md text-sm drop-shadow", a.tagline)}>
+              {cat.tagline}
+            </p>
+            <span className={cn("mt-4 inline-flex text-sm font-bold drop-shadow", a.explore)}>
               Explore →
             </span>
           </div>
@@ -71,7 +84,7 @@ export function CategoryCards() {
   }
 
   return (
-    <section className="border-y border-white/10 bg-slate-950/30 py-16 backdrop-blur-sm md:py-24">
+    <section className="border-y border-border bg-gradient-to-b from-bg-deep/40 to-transparent py-16 backdrop-blur-sm md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader
@@ -102,24 +115,21 @@ export function CategoryCards() {
               ))}
             </div>
           </div>
-          <div className="mt-4 flex justify-center gap-1.5">
+          <div className="mt-4 flex justify-center gap-2">
             {categories.map((_, i) => (
               <button
                 key={i}
                 type="button"
-                aria-label={`Category ${i + 1}`}
+                aria-label={`Go to slide ${i + 1}`}
+                className={cn("carousel-dot", i === selected && "carousel-dot--active")}
                 onClick={() => scrollTo(i)}
-                className={cn(
-                  "carousel-dot",
-                  i === selected && "carousel-dot--active",
-                )}
               />
             ))}
           </div>
         </div>
 
-        <div className="mt-10 text-center">
-          <Button href="/categories" variant="secondary">
+        <div className="mt-12 flex justify-center">
+          <Button href="/categories" variant="outlineGold">
             View all categories
           </Button>
         </div>

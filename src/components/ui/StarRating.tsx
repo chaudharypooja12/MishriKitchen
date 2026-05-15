@@ -16,8 +16,8 @@ export function StarRating({
           className={cn(
             "size-4",
             i < value
-              ? "fill-amber-400 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]"
-              : "fill-transparent text-white/15",
+              ? "fill-gold text-gold drop-shadow-[0_0_4px_rgba(201,162,39,0.45)]"
+              : "fill-transparent text-wood/15",
           )}
         />
       ))}

@@ -4,14 +4,16 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { categories } from "@/data/categories";
+import { categoryAccentClass } from "@/lib/categoryAccent";
 import { pageMetadata } from "@/data/seo";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata("categories");
 
 export default function CategoriesIndexPage() {
   return (
     <div>
-      <section className="border-b border-white/10 bg-slate-950/40 py-16 backdrop-blur-md md:py-20">
+      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[
@@ -20,7 +22,7 @@ export default function CategoriesIndexPage() {
             ]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-wood-dark md:text-5xl">
             Categories
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -32,35 +34,41 @@ export default function CategoriesIndexPage() {
 
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="grid gap-8 md:grid-cols-2">
-          {categories.map((cat, i) => (
-            <FadeIn key={cat.slug} delay={i * 0.06}>
-              <Link
-                href={`/categories/${cat.slug}`}
-                className="group glass-panel flex overflow-hidden transition hover:-translate-y-0.5 hover:border-cyan-400/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]"
-              >
-                <div className="relative hidden w-2/5 shrink-0 sm:block">
-                  <Image
-                    src={cat.heroImage}
-                    alt=""
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6 md:p-8">
-                  <h2 className="font-display text-2xl font-bold text-cyan-100">
-                    {cat.title}
-                  </h2>
-                  <p className="mt-2 text-sm text-amber-300">{cat.tagline}</p>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-text-muted">
-                    {cat.description}
-                  </p>
-                  <span className="mt-4 text-sm font-bold text-fuchsia-300">
-                    View details →
-                  </span>
-                </div>
-              </Link>
-            </FadeIn>
-          ))}
+          {categories.map((cat, i) => {
+            const a = categoryAccentClass[cat.accent];
+            return (
+              <FadeIn key={cat.slug} delay={i * 0.06}>
+                <Link
+                  href={`/categories/${cat.slug}`}
+                  className={cn(
+                    "group glass-panel flex overflow-hidden transition hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgba(61,41,20,0.1)]",
+                    a.border,
+                  )}
+                >
+                  <div className="relative hidden w-2/5 shrink-0 sm:block">
+                    <Image
+                      src={cat.heroImage}
+                      alt=""
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6 md:p-8">
+                    <h2 className="font-display text-2xl font-bold text-wood-dark">
+                      {cat.title}
+                    </h2>
+                    <p className="mt-2 text-sm font-medium text-gold">{cat.tagline}</p>
+                    <p className="mt-4 flex-1 text-sm leading-relaxed text-text-muted">
+                      {cat.description}
+                    </p>
+                    <span className="mt-4 text-sm font-bold text-wood">
+                      View details →
+                    </span>
+                  </div>
+                </Link>
+              </FadeIn>
+            );
+          })}
         </div>
       </section>
     </div>

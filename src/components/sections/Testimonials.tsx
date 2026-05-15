@@ -19,15 +19,15 @@ function TestimonialCard({
 }) {
   return (
     <FadeIn delay={i * 0.06}>
-      <article className="glass-panel flex h-full min-h-[240px] flex-col p-6 transition hover:border-cyan-400/25 hover:shadow-[0_0_36px_rgba(34,211,238,0.1)]">
+      <article className="glass-panel flex h-full min-h-[240px] flex-col p-6 transition hover:border-gold/30 hover:shadow-[0_12px_36px_rgba(61,41,20,0.08)]">
         <StarRating value={t.rating} />
         <p className="mt-4 flex-1 text-sm leading-relaxed text-text">
           &ldquo;{t.quote}&rdquo;
         </p>
-        <div className="mt-6 border-t border-white/10 pt-4">
-          <p className="font-bold text-cyan-200">{t.name}</p>
+        <div className="mt-6 border-t border-border pt-4">
+          <p className="font-bold text-wood-dark">{t.name}</p>
           <p className="text-xs text-text-muted">{t.location}</p>
-          <Badge className="mt-2 border-fuchsia-500/20 bg-fuchsia-500/10 text-fuchsia-200">
+          <Badge className="mt-2 border-accent-fuchsia/25 bg-accent-fuchsia/10 text-accent-fuchsia">
             {t.projectType}
           </Badge>
         </div>

@@ -21,10 +21,10 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div className="grain-overlay">
-      <section className="relative border-b border-white/10 py-16 md:py-24">
+      <section className="relative border-b border-border py-16 md:py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&h=900&q=80&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&h=900&q=80&auto=format&fit=crop"
             alt="About Mishri Kitchen & Home Interior"
             fill
             className="object-cover opacity-40"
@@ -37,7 +37,7 @@ export default function AboutPage() {
             items={[{ label: "Home", href: "/" }, { label: "About" }]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-wood-dark md:text-5xl">
             About Mishri Kitchen & Home Interior
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-slate-950/30 py-16 backdrop-blur-sm md:py-24">
+      <section className="border-y border-border bg-bg-deep/35 py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
           <FadeIn>
             <SectionHeader
@@ -94,7 +94,7 @@ export default function AboutPage() {
             ].map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.06}>
                 <div className="glass-panel p-6">
-                  <h3 className="font-display text-xl font-bold text-cyan-100">
+                  <h3 className="font-display text-xl font-bold text-wood-dark">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm text-text-muted">{p.body}</p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
               label="Founder"
               title={`A note from ${CONTACT.founder}`}
             />
-            <blockquote className="mt-6 border-l-4 border-cyan-400/60 pl-6 text-lg italic leading-relaxed text-text">
+            <blockquote className="mt-6 border-l-4 border-gold pl-6 text-lg italic leading-relaxed text-text">
               &ldquo;We do not chase volume — we chase referrals. That only happens
               when the last 5% of finishing is as tight as the first drawing.&rdquo;
             </blockquote>
@@ -132,7 +132,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-violet-950/15 py-16 backdrop-blur-sm md:py-24">
+      <section className="border-y border-border bg-bg-deep/40 py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
           <FadeIn>
             <SectionHeader label="Journey" title="Milestones" align="center" className="mx-auto" />
@@ -141,7 +141,7 @@ export default function AboutPage() {
             {timeline.map((t, i) => (
               <FadeIn key={t.year} delay={i * 0.05}>
                 <li className="glass-panel flex gap-6 p-5">
-                  <span className="font-display text-2xl font-bold text-amber-300">
+                  <span className="font-display text-2xl font-bold text-gold">
                     {t.year}
                   </span>
                   <p className="text-sm leading-relaxed text-text-muted">{t.text}</p>
@@ -159,7 +159,7 @@ export default function AboutPage() {
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
           {heroStats.map((s) => (
             <div key={s.label} className="glass-panel p-6 text-center">
-              <p className="font-display bg-gradient-to-br from-cyan-200 to-fuchsia-200 bg-clip-text text-3xl font-bold text-transparent">
+              <p className="font-display bg-gradient-to-br from-wood-dark to-gold bg-clip-text text-3xl font-bold text-transparent">
                 {s.value}
               </p>
               <p className="mt-1 text-sm text-text-muted">{s.label}</p>
@@ -168,9 +168,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-gradient-to-r from-violet-950 via-slate-950 to-cyan-950 py-16 text-center md:py-20">
+      <section className="border-t border-border bg-gradient-to-r from-wood-dark via-amber-900 to-stone-900 py-16 text-center md:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-[#fffaf5] md:text-4xl">
             Let&apos;s build something beautiful together
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">

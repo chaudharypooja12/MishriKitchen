@@ -40,7 +40,7 @@ export function ProjectsCarousel() {
   );
 
   const navBtnClass =
-    "rounded-full border border-white/20 bg-slate-950/40 p-3 text-cyan-300 shadow-lg backdrop-blur-md transition hover:border-cyan-400/40 hover:bg-white/10 hover:text-cyan-200 active:scale-95";
+    "rounded-full border border-wood/20 bg-surface p-3 text-wood shadow-md backdrop-blur-md transition hover:border-gold/50 hover:bg-surface-elevated hover:text-wood-dark active:scale-95";
 
   return (
     <section className="py-16 md:py-24">
@@ -82,7 +82,7 @@ export function ProjectsCarousel() {
                 key={p.id}
                 className="min-w-0 shrink-0 basis-[88%] sm:basis-[55%] lg:basis-[31%]"
               >
-                <div className="glass-panel--sm relative aspect-[4/3] overflow-hidden border-white/10 p-0.5 shadow-[var(--shadow-hover)]">
+                <div className="glass-panel--sm relative aspect-[4/3] overflow-hidden border-border p-0.5 shadow-[var(--shadow-hover)]">
                   <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-lg)-2px)]">
                     <Image
                       src={p.image}
@@ -91,15 +91,15 @@ export function ProjectsCarousel() {
                       className="object-cover transition duration-500 hover:scale-105"
                       sizes="(max-width: 640px) 88vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/90 via-stone-900/25 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <Badge className="mb-2 border-cyan-400/30 bg-cyan-500/20 text-cyan-100">
+                      <Badge className="mb-2 border-gold/40 bg-amber-50/90 text-wood-dark">
                         {p.type}
                       </Badge>
-                      <p className="font-display text-lg font-bold text-white">
+                      <p className="font-display text-lg font-bold text-[#fffaf5]">
                         {p.title}
                       </p>
-                      <p className="text-sm text-slate-300">{p.location}</p>
+                      <p className="text-sm text-amber-100/90">{p.location}</p>
                     </div>
                   </div>
                 </div>

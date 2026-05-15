@@ -30,10 +30,10 @@ export function SectionHeader({
         )}
       >
         <span
-          className="h-px w-12 bg-gradient-to-r from-transparent via-cyan-400 to-fuchsia-400"
+          className="h-px w-12 bg-gradient-to-r from-transparent via-gold to-wood-light"
           aria-hidden
         />
-        <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-300 bg-clip-text text-xs font-bold uppercase tracking-[0.28em] text-transparent">
+        <span className="bg-gradient-to-r from-gold to-wood bg-clip-text text-xs font-bold uppercase tracking-[0.28em] text-transparent">
           {label}
         </span>
       </div>

@@ -43,13 +43,13 @@ export function PortfolioGallery() {
 
   return (
     <div>
-      <section className="border-b border-white/10 bg-slate-950/40 py-16 backdrop-blur-md md:py-20">
+      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Portfolio" }]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-wood-dark md:text-5xl">
             Portfolio
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -59,7 +59,7 @@ export function PortfolioGallery() {
         </div>
       </section>
 
-      <div className="glass-nav sticky top-14 z-20 border-b border-white/10 py-3 md:top-16">
+      <div className="glass-nav sticky top-14 z-20 border-b border-border py-3 md:top-16">
         <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 pb-1">
           {portfolioFilters.map((f) => (
             <button
@@ -69,8 +69,8 @@ export function PortfolioGallery() {
               className={cn(
                 "whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition",
                 filter === f
-                  ? "bg-gradient-to-r from-cyan-500 to-teal-500 text-slate-950 shadow-lg shadow-cyan-500/25"
-                  : "border border-white/10 bg-white/5 text-text-muted backdrop-blur-sm hover:border-cyan-400/30 hover:text-cyan-200",
+                  ? "bg-gradient-to-r from-amber-700 to-wood text-[#fff8f0] shadow-md shadow-amber-900/20"
+                  : "border border-border bg-surface text-text-muted backdrop-blur-sm hover:border-gold/40 hover:text-wood",
               )}
             >
               {f}
@@ -87,7 +87,7 @@ export function PortfolioGallery() {
                 type="button"
                 onClick={() => openAt(p.id)}
                 className={cn(
-                  "group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-white/10 bg-white/5 text-left shadow-[var(--shadow-card)] backdrop-blur-sm transition hover:border-cyan-400/25 hover:shadow-[var(--shadow-hover)]",
+                  "group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-border bg-surface text-left shadow-[var(--shadow-card)] backdrop-blur-sm transition hover:border-gold/35 hover:shadow-[var(--shadow-hover)]",
                   p.span === "wide" && "sm:col-span-2",
                 )}
               >
@@ -106,7 +106,7 @@ export function PortfolioGallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition group-hover:opacity-100">
-                    <p className="text-xs font-bold uppercase tracking-wide text-cyan-200">
+                    <p className="text-xs font-bold uppercase tracking-wide text-amber-200">
                       {p.type}
                     </p>
                     <p className="font-display text-lg font-semibold text-white">
@@ -122,7 +122,7 @@ export function PortfolioGallery() {
         </div>
 
         <div className="glass-panel mt-16 p-8 text-center">
-          <p className="font-display text-2xl font-bold text-cyan-100">Like what you see?</p>
+          <p className="font-display text-2xl font-bold text-wood-dark">Like what you see?</p>
           <p className="mt-2 text-text-muted">Let&apos;s design yours.</p>
           <div className="mt-6 flex justify-center">
             <Button href={CONTACT.whatsappWithMessage} variant="whatsapp">

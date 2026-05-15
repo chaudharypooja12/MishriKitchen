@@ -7,12 +7,15 @@ export type Subcategory = {
   materials: string[];
 };
 
+export type CategoryAccent = "ember" | "moss" | "copper" | "indigo";
+
 export type Category = {
   slug: string;
   title: string;
   tagline: string;
   description: string;
   heroImage: string;
+  accent: CategoryAccent;
   subcategories: Subcategory[];
 };
 
@@ -26,7 +29,8 @@ export const categories: Category[] = [
     tagline: "7 styles, endless possibilities",
     description:
       "From compact parallel kitchens to statement islands — engineered for Delhi homes with durable materials and refined detailing.",
-    heroImage: img("photo-1556909114-f6e7ad7d3136"),
+    accent: "ember",
+    heroImage: img("photo-1604707761979-a52407f527b7"),
     subcategories: [
       {
         id: "l-shaped",
@@ -83,7 +87,7 @@ export const categories: Category[] = [
       {
         id: "modern",
         name: "Modern Kitchen",
-        image: img("photo-1600210492486-724fe5c67fb0"),
+        image: img("photo-1593062096033-37a5f451c922"),
         description:
           "Handle-less profiles, crisp lines, and integrated appliances for a gallery-like kitchen.",
         benefits: ["Minimal visual noise", "Easy-clean surfaces", "Integrated appliances"],
@@ -92,7 +96,7 @@ export const categories: Category[] = [
       {
         id: "luxury",
         name: "Luxury Kitchen",
-        image: img("photo-1600607687939-ce8a6c25118c"),
+        image: img("photo-1565538810643-baa0d52fbbdc"),
         description:
           "Rich veneers, stone accents, and bespoke details for homes that demand a showroom finish.",
         benefits: ["Bespoke detailing", "Premium appliances", "Statement materials"],
@@ -101,7 +105,7 @@ export const categories: Category[] = [
       {
         id: "compact",
         name: "Compact Kitchen",
-        image: img("photo-1600566752355-35792bedcfea"),
+        image: img("photo-1600566753190-17f0baa2a6c3"),
         description:
           "Every inch planned — wall cabinets, carousel units, and slim profiles for compact flats.",
         benefits: ["Space-saving carousels", "Vertical storage", "Smart corners"],
@@ -115,12 +119,13 @@ export const categories: Category[] = [
     tagline: "Every room, perfectly designed",
     description:
       "Living, dining, bedrooms, and studies — cohesive palettes, lighting layers, and crafted joinery.",
-    heroImage: img("photo-1586023492125-27b2c045efd7"),
+    accent: "moss",
+    heroImage: img("photo-1600210491892-03d3c3494bfd"),
     subcategories: [
       {
         id: "living",
         name: "Living Room",
-        image: img("photo-1618221195710-dd6b41faaea6"),
+        image: img("photo-1581578731548-c64695cc6952"),
         description:
           "TV walls, display units, and seating layouts tuned for family life and entertaining.",
         benefits: ["Feature walls", "Concealed wiring", "Layered lighting"],
@@ -147,7 +152,7 @@ export const categories: Category[] = [
       {
         id: "study",
         name: "Study Room",
-        image: img("photo-1497366216548-37526070297c"),
+        image: img("photo-1560448204-e02f11c3d0e2"),
         description:
           "Focused work surfaces, book storage, and pin-up space for home offices.",
         benefits: ["Ergonomic desk height", "Task lighting", "Book walls"],
@@ -165,7 +170,7 @@ export const categories: Category[] = [
       {
         id: "dining",
         name: "Dining Room",
-        image: img("photo-1600210491892-03d3c3494bfd"),
+        image: img("photo-1615876210569-4fede77a9224"),
         description:
           "Crockery units, buffet counters, and ceiling treatments that frame shared meals.",
         benefits: ["Display crockery", "Serving counters", "Warm lighting"],
@@ -179,7 +184,8 @@ export const categories: Category[] = [
     tagline: "Smart storage, elegant finish",
     description:
       "Sliding, hinged, walk-in, and glass wardrobes tailored to ceiling heights and habits.",
-    heroImage: img("photo-1558618666-fcd25c85cd64"),
+    accent: "copper",
+    heroImage: img("photo-1631889990147-a6944581bcf5"),
     subcategories: [
       {
         id: "sliding",
@@ -193,7 +199,7 @@ export const categories: Category[] = [
       {
         id: "walk-in",
         name: "Walk-in Wardrobes",
-        image: img("photo-1600566752355-35792bedcfea"),
+        image: img("photo-1584622650110-044b00024cad"),
         description:
           "Dressing islands, shoe walls, and open + closed storage for collector wardrobes.",
         benefits: ["Zoned storage", "Island dresser", "Accessory drawers"],
@@ -225,6 +231,7 @@ export const categories: Category[] = [
     tagline: "Top brands, best prices",
     description:
       "Chimneys, cooktops, ovens, and microwaves — curated for Indian cooking with professional install.",
+    accent: "indigo",
     heroImage: img("photo-1556912172-45b7abe8b7e1"),
     subcategories: [
       {

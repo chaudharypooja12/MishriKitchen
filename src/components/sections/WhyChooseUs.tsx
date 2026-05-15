@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function WhyChooseUs() {
   return (
-    <section className="border-y border-white/10 bg-slate-950/20 py-16 backdrop-blur-sm md:py-24">
+    <section className="border-y border-border bg-bg-deep/25 py-16 backdrop-blur-sm md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader
@@ -21,10 +21,10 @@ export function WhyChooseUs() {
               <div
                 className={cn(
                   "glass-panel h-full p-6 transition",
-                  "hover:-translate-y-1 hover:border-cyan-400/25 hover:shadow-[0_0_32px_rgba(34,211,238,0.12)]",
+                  "hover:-translate-y-1 hover:border-gold/30 hover:shadow-[0_12px_32px_rgba(61,41,20,0.08)]",
                 )}
               >
-                <h3 className="font-display text-xl font-bold text-cyan-100">
+                <h3 className="font-display text-xl font-bold text-wood-dark">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-text-muted">

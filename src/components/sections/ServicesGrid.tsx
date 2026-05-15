@@ -36,17 +36,17 @@ function ServiceCard({ s, i }: { s: (typeof services)[0]; i: number }) {
         href="/services"
         className={cn(
           "group glass-panel flex h-full min-h-[200px] flex-col p-6 transition",
-          "hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]",
+          "hover:-translate-y-1 hover:border-gold/35 hover:shadow-[0_12px_40px_rgba(61,41,20,0.1)]",
         )}
       >
-        <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/10 text-cyan-200 transition group-hover:from-cyan-400/30 group-hover:to-fuchsia-500/20">
+        <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl border border-gold/30 bg-gradient-to-br from-amber-50 to-orange-50/80 text-wood transition group-hover:from-amber-100 group-hover:to-orange-100">
           <Icon className="size-6" />
         </div>
         <h3 className="font-display text-xl font-bold text-text">{s.title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-text-muted">
           {s.shortDesc}
         </p>
-        <span className="mt-4 text-sm font-semibold text-fuchsia-300 transition group-hover:text-cyan-200">
+        <span className="mt-4 text-sm font-semibold text-gold transition group-hover:text-wood-dark">
           Learn more →
         </span>
       </Link>

@@ -14,17 +14,17 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer className="grain-overlay relative mt-auto border-t border-white/10 bg-slate-950/40 backdrop-blur-xl">
+    <footer className="grain-overlay relative mt-auto border-t border-border bg-gradient-to-b from-surface/90 to-bg-deep/95 backdrop-blur-xl">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display bg-gradient-to-r from-cyan-200 to-fuchsia-200 bg-clip-text text-xl font-bold text-transparent">
+          <p className="font-display bg-gradient-to-r from-wood-dark via-wood to-gold bg-clip-text text-xl font-bold text-transparent">
             Mishri Kitchen
           </p>
           <p className="mt-3 text-sm leading-relaxed text-text-muted">
             Premium modular kitchens & home interiors across Delhi NCR.
           </p>
           <div className="mt-4 flex flex-col gap-1 text-sm">
-            <a className="text-cyan-300 transition hover:text-cyan-200 hover:underline" href={CONTACT.tel1}>
+            <a className="text-wood transition hover:text-gold hover:underline" href={CONTACT.tel1}>
               {CONTACT.phone1_display}
             </a>
             <a
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-widest text-fuchsia-300">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-wood">
             Quick links
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
@@ -47,7 +47,7 @@ export function Footer() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="text-text-muted transition hover:text-cyan-200 hover:underline"
+                  className="text-text-muted transition hover:text-wood hover:underline"
                 >
                   {l.label}
                 </Link>
@@ -57,7 +57,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-widest text-fuchsia-300">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-wood">
             Services
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
@@ -65,7 +65,7 @@ export function Footer() {
               <li key={s.id}>
                 <Link
                   href="/services"
-                  className="text-text-muted transition hover:text-cyan-200 hover:underline"
+                  className="text-text-muted transition hover:text-wood hover:underline"
                 >
                   {s.title}
                 </Link>
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-bold uppercase tracking-widest text-fuchsia-300">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-wood">
             Visit
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-text-muted">
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-4 text-center text-xs text-text-muted">
+      <div className="border-t border-border py-4 text-center text-xs text-text-muted">
         © {new Date().getFullYear()} {CONTACT.brandName}. All rights reserved.
       </div>
     </footer>

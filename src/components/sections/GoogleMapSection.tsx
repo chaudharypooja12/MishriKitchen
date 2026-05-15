@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/constants";
 
 export function GoogleMapSection() {
   return (
-    <section className="border-t border-white/10 bg-slate-950/25 py-16 backdrop-blur-sm md:py-20">
+    <section className="border-t border-border bg-bg-deep/30 py-16 backdrop-blur-sm md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader
@@ -18,14 +18,14 @@ export function GoogleMapSection() {
           <iframe
             title="Mishri Kitchen on Google Maps"
             src={CONTACT.mapsEmbed}
-            className="h-[min(400px,55vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-slate-900/80 md:h-[400px]"
+            className="h-[min(400px,55vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-bg-deep md:h-[400px]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
         <div className="glass-panel mt-8 flex flex-col items-start justify-between gap-6 p-6 md:flex-row md:items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-fuchsia-300">
+            <p className="text-sm font-bold uppercase tracking-wide text-wood">
               Office
             </p>
             <p className="mt-1 text-sm text-text-muted">

@@ -15,13 +15,13 @@ const hours = [
 export default function ContactPage() {
   return (
     <div>
-      <section className="border-b border-white/10 bg-slate-950/40 py-16 backdrop-blur-md md:py-20">
+      <section className="border-b border-border bg-bg-deep/40 py-16 backdrop-blur-md md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-wood-dark md:text-5xl">
             Get in touch — we&apos;d love to help
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -35,7 +35,7 @@ export default function ContactPage() {
         <div className="grid gap-6 md:grid-cols-3">
           <FadeIn>
             <div className="glass-panel flex h-full flex-col p-8">
-              <span className="text-sm font-bold uppercase tracking-wider text-fuchsia-300">
+              <span className="text-sm font-bold uppercase tracking-wider text-wood">
                 Visit us
               </span>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-text-muted">
@@ -52,14 +52,14 @@ export default function ContactPage() {
           </FadeIn>
           <FadeIn delay={0.05}>
             <div className="glass-panel flex h-full flex-col p-8">
-              <span className="text-sm font-bold uppercase tracking-wider text-fuchsia-300">
+              <span className="text-sm font-bold uppercase tracking-wider text-wood">
                 Call us
               </span>
               <div className="mt-4 flex-1 space-y-2 text-sm">
-                <a className="block font-semibold text-cyan-300 hover:underline" href={CONTACT.tel1}>
+                <a className="block font-semibold text-wood hover:underline" href={CONTACT.tel1}>
                   {CONTACT.phone1_display}
                 </a>
-                <a className="block font-semibold text-cyan-300 hover:underline" href={CONTACT.tel2}>
+                <a className="block font-semibold text-wood hover:underline" href={CONTACT.tel2}>
                   {CONTACT.phone2_display}
                 </a>
               </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="glass-panel flex h-full flex-col p-8">
-              <span className="text-sm font-bold uppercase tracking-wider text-fuchsia-300">
+              <span className="text-sm font-bold uppercase tracking-wider text-wood">
                 WhatsApp
               </span>
               <p className="mt-4 flex-1 text-sm text-text-muted">
@@ -86,13 +86,13 @@ export default function ContactPage() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           <FadeIn>
-            <h2 className="font-display text-2xl font-bold text-cyan-100">
+            <h2 className="font-display text-2xl font-bold text-wood-dark">
               Business hours
             </h2>
             <table className="mt-4 w-full text-sm">
               <tbody>
                 {hours.map((row) => (
-                  <tr key={row.day} className="border-b border-white/10">
+                  <tr key={row.day} className="border-b border-border">
                     <td className="py-3 font-medium text-text">{row.day}</td>
                     <td className="py-3 text-text-muted">{row.hours}</td>
                   </tr>
@@ -101,7 +101,7 @@ export default function ContactPage() {
             </table>
           </FadeIn>
           <FadeIn delay={0.06}>
-            <h2 className="font-display text-2xl font-bold text-cyan-100">
+            <h2 className="font-display text-2xl font-bold text-wood-dark">
               Factory / workshop
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-text-muted">
@@ -114,17 +114,17 @@ export default function ContactPage() {
           <iframe
             title="Mishri Kitchen location map"
             src={CONTACT.mapsEmbed}
-            className="h-[min(500px,60vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-slate-900/80 md:h-[500px]"
+            className="h-[min(500px,60vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-bg-deep md:h-[500px]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
 
-        <div className="glass-panel mt-16 bg-gradient-to-br from-violet-950/50 to-cyan-950/40 p-10 text-center">
-          <h2 className="font-display text-3xl font-bold text-white">
+        <div className="glass-panel mt-16 bg-gradient-to-br from-wood-dark/90 via-amber-900/85 to-stone-900/90 p-10 text-center">
+          <h2 className="font-display text-3xl font-bold text-[#fffaf5]">
             Ready to start your project?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-slate-200/90">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-amber-50/95">
             Our team is available Mon–Sat, 10 AM – 7 PM. Walk in or call ahead.
           </p>
           <div className="mt-8 flex flex-col flex-wrap justify-center gap-4 sm:flex-row">
