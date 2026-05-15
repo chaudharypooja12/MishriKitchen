@@ -5,7 +5,7 @@ import { CONTACT } from "@/lib/constants";
 
 export function GoogleMapSection() {
   return (
-    <section className="border-t border-border bg-beige/30 py-16 md:py-20">
+    <section className="border-t border-white/10 bg-slate-950/25 py-16 backdrop-blur-sm md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader
@@ -14,18 +14,20 @@ export function GoogleMapSection() {
             subtitle="Walk-ins welcome Mon–Sat. Call ahead for Sunday appointments."
           />
         </FadeIn>
-        <div className="mt-10 overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-card)]">
+        <div className="glass-panel mt-10 overflow-hidden p-1">
           <iframe
             title="Mishri Kitchen on Google Maps"
             src={CONTACT.mapsEmbed}
-            className="h-[400px] w-full bg-surface"
+            className="h-[min(400px,55vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-slate-900/80 md:h-[400px]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <div className="mt-8 flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-surface p-6 md:flex-row md:items-center">
+        <div className="glass-panel mt-8 flex flex-col items-start justify-between gap-6 p-6 md:flex-row md:items-center">
           <div>
-            <p className="text-sm font-semibold text-wood">Office</p>
+            <p className="text-sm font-bold uppercase tracking-wide text-fuchsia-300">
+              Office
+            </p>
             <p className="mt-1 text-sm text-text-muted">
               {CONTACT.address.line1}, {CONTACT.address.line2}
               <br />

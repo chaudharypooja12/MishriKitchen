@@ -1,11 +1,64 @@
+"use client";
+
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StarRating } from "@/components/ui/StarRating";
 import { Badge } from "@/components/ui/Badge";
 import { testimonialsHome } from "@/data/testimonials";
+import { cn } from "@/lib/utils";
+
+function TestimonialCard({
+  t,
+  i,
+}: {
+  t: (typeof testimonialsHome)[0];
+  i: number;
+}) {
+  return (
+    <FadeIn delay={i * 0.06}>
+      <article className="glass-panel flex h-full min-h-[240px] flex-col p-6 transition hover:border-cyan-400/25 hover:shadow-[0_0_36px_rgba(34,211,238,0.1)]">
+        <StarRating value={t.rating} />
+        <p className="mt-4 flex-1 text-sm leading-relaxed text-text">
+          &ldquo;{t.quote}&rdquo;
+        </p>
+        <div className="mt-6 border-t border-white/10 pt-4">
+          <p className="font-bold text-cyan-200">{t.name}</p>
+          <p className="text-xs text-text-muted">{t.location}</p>
+          <Badge className="mt-2 border-fuchsia-500/20 bg-fuchsia-500/10 text-fuchsia-200">
+            {t.projectType}
+          </Badge>
+        </div>
+      </article>
+    </FadeIn>
+  );
+}
 
 export function Testimonials() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: false,
+    dragFree: true,
+  });
+  const [selected, setSelected] = useState(0);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (i: number) => emblaApi?.scrollTo(i),
+    [emblaApi],
+  );
+
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
@@ -18,23 +71,42 @@ export function Testimonials() {
             className="mx-auto"
           />
         </FadeIn>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+
+        <div className="mt-14 hidden gap-6 md:grid md:grid-cols-3">
           {testimonialsHome.map((t, i) => (
-            <FadeIn key={t.id} delay={i * 0.06}>
-              <article className="flex h-full flex-col rounded-2xl border border-border bg-surface p-6 shadow-[var(--shadow-card)]">
-                <StarRating value={t.rating} />
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-text">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="mt-6 border-t border-border pt-4">
-                  <p className="font-semibold text-wood">{t.name}</p>
-                  <p className="text-xs text-text-muted">{t.location}</p>
-                  <Badge className="mt-2">{t.projectType}</Badge>
-                </div>
-              </article>
-            </FadeIn>
+            <TestimonialCard key={t.id} t={t} i={i} />
           ))}
         </div>
+
+        <div className="mt-10 md:hidden">
+          <div className="overflow-hidden pb-2" ref={emblaRef}>
+            <div className="flex gap-4">
+              {testimonialsHome.map((t, i) => (
+                <div
+                  key={t.id}
+                  className="min-w-0 shrink-0 basis-[90%]"
+                >
+                  <TestimonialCard t={t} i={i} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-4 flex justify-center gap-1.5">
+            {testimonialsHome.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Testimonial ${i + 1}`}
+                onClick={() => scrollTo(i)}
+                className={cn(
+                  "carousel-dot",
+                  i === selected && "carousel-dot--active",
+                )}
+              />
+            ))}
+          </div>
+        </div>
+
         <div className="mt-10 text-center">
           <Button href="/reviews" variant="secondary">
             See all reviews →

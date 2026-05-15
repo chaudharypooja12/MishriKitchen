@@ -1,32 +1,40 @@
 @import "tailwindcss";
 
+/* Dark glass design system — semantic aliases (wood/gold) map to neon-friendly primaries */
 :root {
-  --color-bg: #faf7f2;
-  --color-surface: #f6f1e8;
-  --color-border: #e3d9cd;
-  --color-wood: #6b4423;
-  --color-wood-dark: #4a2f1b;
-  --color-wood-light: #a47551;
-  --color-beige: #e7d8c9;
-  --color-gold: #c9a86a;
-  --color-gold-light: #e8d5a3;
-  --color-text: #2d241d;
-  --color-text-muted: #6f6257;
-  --color-success: #2f855a;
+  --color-bg: #060912;
+  --color-surface: rgba(255, 255, 255, 0.06);
+  --color-surface-elevated: rgba(255, 255, 255, 0.1);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-wood: #22d3ee;
+  --color-wood-dark: #06b6d4;
+  --color-wood-light: #67e8f9;
+  --color-beige: rgba(167, 139, 250, 0.12);
+  --color-gold: #fbbf24;
+  --color-gold-light: #fde68a;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-accent-violet: #a78bfa;
+  --color-accent-fuchsia: #e879f9;
+  --color-accent-amber: #fbbf24;
+  --color-success: #34d399;
   --color-whatsapp: #25d366;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-2xl: 32px;
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
-  --shadow-float: 0 8px 32px rgba(107, 68, 35, 0.2);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --shadow-glow-cyan: 0 0 40px rgba(34, 211, 238, 0.25);
+  --shadow-glow-violet: 0 0 40px rgba(167, 139, 250, 0.2);
 }
 
 @theme inline {
   --color-background: var(--color-bg);
   --color-surface: var(--color-surface);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-surface-elevated: var(--color-surface-elevated);
   --color-border: var(--color-border);
   --color-wood: var(--color-wood);
   --color-wood-dark: var(--color-wood-dark);
@@ -36,16 +44,28 @@
   --color-gold-light: var(--color-gold-light);
   --color-text: var(--color-text);
   --color-text-muted: var(--color-text-muted);
+  --color-accent-violet: var(--color-accent-violet);
+  --color-accent-fuchsia: var(--color-accent-fuchsia);
+  --color-accent-amber: var(--color-accent-amber);
   --color-success: var(--color-success);
   --color-whatsapp: var(--color-whatsapp);
-  --font-display: var(--font-display), ui-serif, Georgia, serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
 }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-body);
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-body);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-wood);
+    outline-offset: 3px;
+  }
 }
 
 .font-body {
@@ -56,7 +76,67 @@ body {
   font-family: var(--font-display);
 }
 
-/* subtle paper grain (Aby depth) */
+/* Animated mesh backdrop (fixed layer) */
+.mesh-bg {
+  position: relative;
+  isolation: isolate;
+  min-height: 100%;
+}
+.mesh-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse 90% 55% at 15% -10%, rgba(34, 211, 238, 0.28), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 95% 5%, rgba(167, 139, 250, 0.22), transparent 50%),
+    radial-gradient(ellipse 55% 40% at 85% 95%, rgba(232, 121, 249, 0.14), transparent 45%),
+    radial-gradient(ellipse 50% 45% at 5% 85%, rgba(251, 191, 36, 0.12), transparent 45%);
+  animation: meshShift 20s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesh-bg::before {
+    animation: none;
+  }
+}
+@keyframes meshShift {
+  0% {
+    filter: hue-rotate(0deg) saturate(1);
+    transform: scale(1);
+  }
+  100% {
+    filter: hue-rotate(12deg) saturate(1.08);
+    transform: scale(1.03);
+  }
+}
+
+.glass-panel {
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel--sm {
+  border-radius: var(--radius-lg);
+}
+
+.glass-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(6, 9, 18, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
 .grain-overlay {
   position: relative;
 }
@@ -65,6 +145,20 @@ body {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  opacity: 0.04;
+  opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Carousel dots helper */
+.carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s, background 0.2s;
+}
+.carousel-dot--active {
+  background: var(--color-wood);
+  transform: scale(1.25);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
 }

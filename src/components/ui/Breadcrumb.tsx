@@ -11,18 +11,24 @@ export function Breadcrumb({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={cn("flex flex-wrap items-center gap-2 text-sm text-text-muted", className)}
+      className={cn(
+        "flex flex-wrap items-center gap-2 text-sm text-text-muted",
+        className,
+      )}
     >
       <ol className="flex flex-wrap items-center gap-2">
         {items.map((item, i) => (
           <li key={item.label} className="flex items-center gap-2">
-            {i > 0 && <span className="text-border">/</span>}
+            {i > 0 && <span className="text-white/20">/</span>}
             {item.href ? (
-              <Link href={item.href} className="hover:text-wood hover:underline">
+              <Link
+                href={item.href}
+                className="transition hover:text-cyan-300 hover:underline"
+              >
                 {item.label}
               </Link>
             ) : (
-              <span className="font-medium text-wood">{item.label}</span>
+              <span className="font-medium text-text">{item.label}</span>
             )}
           </li>
         ))}

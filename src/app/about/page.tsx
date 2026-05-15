@@ -21,23 +21,23 @@ const timeline = [
 export default function AboutPage() {
   return (
     <div className="grain-overlay">
-      <section className="relative border-b border-border py-16 md:py-24">
+      <section className="relative border-b border-white/10 py-16 md:py-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&h=900&q=80&auto=format&fit=crop"
             alt="About Mishri Kitchen & Home Interior"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-40"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/92 to-background" />
         </div>
         <div className="relative z-10 mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "About" }]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-semibold text-wood md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
             About Mishri Kitchen & Home Interior
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-surface py-16 md:py-24">
+      <section className="border-y border-white/10 bg-slate-950/30 py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
           <FadeIn>
             <SectionHeader
@@ -93,8 +93,8 @@ export default function AboutPage() {
               },
             ].map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.06}>
-                <div className="rounded-2xl border border-border bg-background p-6">
-                  <h3 className="font-display text-xl font-semibold text-wood">
+                <div className="glass-panel p-6">
+                  <h3 className="font-display text-xl font-bold text-cyan-100">
                     {p.title}
                   </h3>
                   <p className="mt-3 text-sm text-text-muted">{p.body}</p>
@@ -108,13 +108,15 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <FadeIn>
-            <div className="relative aspect-square overflow-hidden rounded-2xl bg-beige">
-              <Image
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&q=80&auto=format&fit=crop"
-                alt={CONTACT.founder}
-                fill
-                className="object-cover"
-              />
+            <div className="glass-panel relative aspect-square overflow-hidden p-1">
+              <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-xl)-4px)]">
+                <Image
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&q=80&auto=format&fit=crop"
+                  alt={CONTACT.founder}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </FadeIn>
           <FadeIn delay={0.08}>
@@ -122,7 +124,7 @@ export default function AboutPage() {
               label="Founder"
               title={`A note from ${CONTACT.founder}`}
             />
-            <blockquote className="mt-6 border-l-4 border-gold pl-6 text-lg italic leading-relaxed text-text">
+            <blockquote className="mt-6 border-l-4 border-cyan-400/60 pl-6 text-lg italic leading-relaxed text-text">
               &ldquo;We do not chase volume — we chase referrals. That only happens
               when the last 5% of finishing is as tight as the first drawing.&rdquo;
             </blockquote>
@@ -130,7 +132,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-beige/40 py-16 md:py-24">
+      <section className="border-y border-white/10 bg-violet-950/15 py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
           <FadeIn>
             <SectionHeader label="Journey" title="Milestones" align="center" className="mx-auto" />
@@ -138,8 +140,8 @@ export default function AboutPage() {
           <ol className="mx-auto mt-12 max-w-3xl space-y-6">
             {timeline.map((t, i) => (
               <FadeIn key={t.year} delay={i * 0.05}>
-                <li className="flex gap-6 rounded-xl border border-border bg-surface p-5">
-                  <span className="font-display text-2xl font-semibold text-gold">
+                <li className="glass-panel flex gap-6 p-5">
+                  <span className="font-display text-2xl font-bold text-amber-300">
                     {t.year}
                   </span>
                   <p className="text-sm leading-relaxed text-text-muted">{t.text}</p>
@@ -156,20 +158,19 @@ export default function AboutPage() {
         </FadeIn>
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
           {heroStats.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl border border-border bg-surface p-6 text-center"
-            >
-              <p className="font-display text-3xl font-semibold text-wood">{s.value}</p>
+            <div key={s.label} className="glass-panel p-6 text-center">
+              <p className="font-display bg-gradient-to-br from-cyan-200 to-fuchsia-200 bg-clip-text text-3xl font-bold text-transparent">
+                {s.value}
+              </p>
               <p className="mt-1 text-sm text-text-muted">{s.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-border bg-wood py-16 text-center text-white md:py-20">
+      <section className="border-t border-white/10 bg-gradient-to-r from-violet-950 via-slate-950 to-cyan-950 py-16 text-center md:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="font-display text-3xl font-semibold md:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
             Let&apos;s build something beautiful together
           </h2>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">

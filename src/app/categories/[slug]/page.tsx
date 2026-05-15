@@ -41,7 +41,7 @@ export default async function CategoryPage({
 
   return (
     <div>
-      <section className="relative h-[42vh] min-h-[280px] border-b border-border">
+      <section className="relative h-[42vh] min-h-[280px] border-b border-white/10">
         <Image
           src={category.heroImage}
           alt={`${category.title} - Mishri Kitchen & Home Interior`}
@@ -50,10 +50,10 @@ export default async function CategoryPage({
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-violet-900/30" />
       </section>
 
-      <section className="border-b border-border bg-surface">
+      <section className="border-b border-white/10 bg-slate-950/50 backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
           <Breadcrumb
             items={[
@@ -63,10 +63,10 @@ export default async function CategoryPage({
             ]}
             className="mb-6"
           />
-          <h1 className="font-display text-4xl font-semibold text-wood md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
             {category.title}
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-gold">{category.tagline}</p>
+          <p className="mt-3 max-w-2xl text-lg text-amber-300">{category.tagline}</p>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted">
             {category.description}
           </p>
@@ -82,40 +82,42 @@ export default async function CategoryPage({
           >
             <FadeIn delay={i * 0.04}>
               <div className="grid gap-10 md:grid-cols-2 md:items-start">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-card)]">
-                  <Image
-                    src={sub.image}
-                    alt={`${sub.name} - Mishri Kitchen & Home Interior`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                <div className="glass-panel--sm relative aspect-[4/3] overflow-hidden p-0.5">
+                  <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-lg)-2px)]">
+                    <Image
+                      src={sub.image}
+                      alt={`${sub.name} - Mishri Kitchen & Home Interior`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <h2 className="font-display text-3xl font-semibold text-wood">
+                  <h2 className="font-display text-3xl font-bold text-cyan-100">
                     {sub.name}
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-text-muted">
                     {sub.description}
                   </p>
-                  <h3 className="mt-8 text-sm font-semibold uppercase tracking-wider text-gold">
+                  <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-fuchsia-300">
                     Benefits
                   </h3>
                   <ul className="mt-3 space-y-2">
                     {sub.benefits.map((b) => (
                       <li key={b} className="flex gap-2 text-sm text-text">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold" />
+                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-fuchsia-500" />
                         {b}
                       </li>
                     ))}
                   </ul>
-                  <h3 className="mt-8 text-sm font-semibold uppercase tracking-wider text-gold">
+                  <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-fuchsia-300">
                     Materials
                   </h3>
                   <ul className="mt-3 space-y-2">
                     {sub.materials.map((m) => (
                       <li key={m} className="flex gap-2 text-sm text-text">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-wood-light" />
+                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-amber-400/80" />
                         {m}
                       </li>
                     ))}

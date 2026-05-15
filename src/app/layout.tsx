@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { AppShell } from "@/components/layout/AppShell";
 import { SITE_URL } from "@/lib/constants";
 
-const playfair = Playfair_Display({
+const syne = Syne({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -42,9 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} h-full scroll-smooth antialiased`}
+      className={`${syne.variable} ${plusJakarta.variable} h-full scroll-smooth bg-[#060912] antialiased`}
     >
-      <body className="font-body min-h-full bg-background text-text">
+      <body className="font-body min-h-full text-text">
         <JsonLd />
         <AppShell>{children}</AppShell>
       </body>

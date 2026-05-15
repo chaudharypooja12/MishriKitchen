@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMetadata("categories");
 export default function CategoriesIndexPage() {
   return (
     <div>
-      <section className="border-b border-border bg-surface py-16 md:py-20">
+      <section className="border-b border-white/10 bg-slate-950/40 py-16 backdrop-blur-md md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[
@@ -20,7 +20,7 @@ export default function CategoriesIndexPage() {
             ]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-semibold text-wood md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
             Categories
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -36,7 +36,7 @@ export default function CategoriesIndexPage() {
             <FadeIn key={cat.slug} delay={i * 0.06}>
               <Link
                 href={`/categories/${cat.slug}`}
-                className="group flex overflow-hidden rounded-2xl border border-border bg-background shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)]"
+                className="group glass-panel flex overflow-hidden transition hover:-translate-y-0.5 hover:border-cyan-400/30 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]"
               >
                 <div className="relative hidden w-2/5 shrink-0 sm:block">
                   <Image
@@ -47,14 +47,14 @@ export default function CategoriesIndexPage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6 md:p-8">
-                  <h2 className="font-display text-2xl font-semibold text-wood">
+                  <h2 className="font-display text-2xl font-bold text-cyan-100">
                     {cat.title}
                   </h2>
-                  <p className="mt-2 text-sm text-gold">{cat.tagline}</p>
+                  <p className="mt-2 text-sm text-amber-300">{cat.tagline}</p>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-text-muted">
                     {cat.description}
                   </p>
-                  <span className="mt-4 text-sm font-semibold text-wood">
+                  <span className="mt-4 text-sm font-bold text-fuchsia-300">
                     View details →
                   </span>
                 </div>

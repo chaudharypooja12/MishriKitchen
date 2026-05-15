@@ -3,12 +3,13 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
 import { featuredProjects } from "@/data/portfolio";
+import { cn } from "@/lib/utils";
 
 export function ProjectsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -16,9 +17,30 @@ export function ProjectsCarousel() {
     loop: true,
     skipSnaps: false,
   });
+  const [selected, setSelected] = useState(0);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (i: number) => emblaApi?.scrollTo(i),
+    [emblaApi],
+  );
+
+  const navBtnClass =
+    "rounded-full border border-white/20 bg-slate-950/40 p-3 text-cyan-300 shadow-lg backdrop-blur-md transition hover:border-cyan-400/40 hover:bg-white/10 hover:text-cyan-200 active:scale-95";
 
   return (
     <section className="py-16 md:py-24">
@@ -31,50 +53,54 @@ export function ProjectsCarousel() {
               subtitle="A glimpse of recent kitchens and interiors across Delhi."
             />
           </FadeIn>
-          <div className="hidden gap-2 md:flex">
-            <button
-              type="button"
-              onClick={scrollPrev}
-              className="rounded-full border border-border bg-surface p-3 text-wood shadow-sm transition hover:bg-beige"
-              aria-label="Previous"
-            >
-              <ChevronLeft className="size-5" />
-            </button>
-            <button
-              type="button"
-              onClick={scrollNext}
-              className="rounded-full border border-border bg-surface p-3 text-wood shadow-sm transition hover:bg-beige"
-              aria-label="Next"
-            >
-              <ChevronRight className="size-5" />
-            </button>
+          <div className="flex items-center justify-between gap-3 md:justify-end">
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={scrollPrev}
+                className={navBtnClass}
+                aria-label="Previous"
+              >
+                <ChevronLeft className="size-5" />
+              </button>
+              <button
+                type="button"
+                onClick={scrollNext}
+                className={navBtnClass}
+                aria-label="Next"
+              >
+                <ChevronRight className="size-5" />
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-4 md:gap-6">
+        <div className="mt-10 overflow-hidden md:mt-12" ref={emblaRef}>
+          <div className="flex touch-pan-y gap-4 md:gap-6">
             {featuredProjects.map((p) => (
               <div
                 key={p.id}
-                className="min-w-0 shrink-0 basis-[85%] sm:basis-[48%] lg:basis-[31%]"
+                className="min-w-0 shrink-0 basis-[88%] sm:basis-[55%] lg:basis-[31%]"
               >
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[var(--shadow-card)]">
-                  <Image
-                    src={p.image}
-                    alt={`${p.title} - Mishri Kitchen & Home Interior`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 85vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <Badge className="mb-2 border-white/20 bg-white/10 text-white">
-                      {p.type}
-                    </Badge>
-                    <p className="font-display text-lg font-semibold text-white">
-                      {p.title}
-                    </p>
-                    <p className="text-sm text-white/80">{p.location}</p>
+                <div className="glass-panel--sm relative aspect-[4/3] overflow-hidden border-white/10 p-0.5 shadow-[var(--shadow-hover)]">
+                  <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-lg)-2px)]">
+                    <Image
+                      src={p.image}
+                      alt={`${p.title} - Mishri Kitchen & Home Interior`}
+                      fill
+                      className="object-cover transition duration-500 hover:scale-105"
+                      sizes="(max-width: 640px) 88vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <Badge className="mb-2 border-cyan-400/30 bg-cyan-500/20 text-cyan-100">
+                        {p.type}
+                      </Badge>
+                      <p className="font-display text-lg font-bold text-white">
+                        {p.title}
+                      </p>
+                      <p className="text-sm text-slate-300">{p.location}</p>
+                    </div>
                   </div>
                 </div>
                 <p className="mt-3 line-clamp-2 text-sm text-text-muted">
@@ -83,6 +109,18 @@ export function ProjectsCarousel() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-6 flex justify-center gap-2 md:mt-8">
+          {featuredProjects.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Go to slide ${i + 1}`}
+              onClick={() => scrollTo(i)}
+              className={cn("carousel-dot", i === selected && "carousel-dot--active")}
+            />
+          ))}
         </div>
 
         <div className="mt-10 flex justify-center md:justify-start">

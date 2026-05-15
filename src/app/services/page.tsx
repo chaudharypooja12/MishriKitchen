@@ -31,13 +31,13 @@ const iconMap: Record<string, LucideIcon> = {
 export default function ServicesPage() {
   return (
     <div>
-      <section className="border-b border-border bg-surface py-16 md:py-20">
+      <section className="border-b border-white/10 bg-slate-950/40 py-16 backdrop-blur-md md:py-20">
         <div className="mx-auto max-w-6xl px-4">
           <Breadcrumb
             items={[{ label: "Home", href: "/" }, { label: "Services" }]}
             className="mb-8"
           />
-          <h1 className="font-display text-4xl font-semibold text-wood md:text-5xl">
+          <h1 className="font-display text-4xl font-bold text-cyan-100 md:text-5xl">
             Our services
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
@@ -52,12 +52,12 @@ export default function ServicesPage() {
           const Icon = iconMap[s.icon] ?? ChefHat;
           return (
             <FadeIn key={s.id} delay={i * 0.04}>
-              <article className="grid gap-10 rounded-2xl border border-border bg-background p-8 shadow-[var(--shadow-card)] md:grid-cols-[auto_1fr] md:p-10">
-                <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-beige text-wood">
+              <article className="glass-panel grid gap-10 p-8 md:grid-cols-[auto_1fr] md:p-10">
+                <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/10 text-cyan-200">
                   <Icon className="size-8" />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl font-semibold text-wood md:text-3xl">
+                  <h2 className="font-display text-2xl font-bold text-cyan-100 md:text-3xl">
                     {s.title}
                   </h2>
                   <p className="mt-4 text-base leading-relaxed text-text-muted">
@@ -66,7 +66,7 @@ export default function ServicesPage() {
                   <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                     {s.features.map((f) => (
                       <li key={f} className="flex gap-2 text-sm text-text">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gold" />
+                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-fuchsia-500 shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
                         {f}
                       </li>
                     ))}

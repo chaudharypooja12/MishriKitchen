@@ -9,13 +9,15 @@ export function StarRating({
   className?: string;
 }) {
   return (
-    <div className={cn("flex items-center gap-0.5 text-gold", className)} aria-hidden>
+    <div className={cn("flex items-center gap-0.5", className)} aria-hidden>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
           className={cn(
             "size-4",
-            i < value ? "fill-gold text-gold" : "fill-transparent text-border",
+            i < value
+              ? "fill-amber-400 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.5)]"
+              : "fill-transparent text-white/15",
           )}
         />
       ))}

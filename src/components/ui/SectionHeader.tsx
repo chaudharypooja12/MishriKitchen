@@ -29,12 +29,15 @@ export function SectionHeader({
           align === "center" && "justify-center",
         )}
       >
-        <span className="h-px w-10 bg-gold" aria-hidden />
-        <span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+        <span
+          className="h-px w-12 bg-gradient-to-r from-transparent via-cyan-400 to-fuchsia-400"
+          aria-hidden
+        />
+        <span className="bg-gradient-to-r from-cyan-300 to-fuchsia-300 bg-clip-text text-xs font-bold uppercase tracking-[0.28em] text-transparent">
           {label}
         </span>
       </div>
-      <h2 className="font-display text-3xl font-semibold tracking-tight text-wood md:text-4xl">
+      <h2 className="font-display text-3xl font-bold tracking-tight text-text md:text-4xl md:leading-tight">
         {title}
       </h2>
       {subtitle && (

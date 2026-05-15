@@ -15,4 +15,4 @@ The Cursor rule `.cursor/rules/memory-bank.mdc` reinforces this workflow.
 
 ## Design
 
-Follow **Aby** (`.cursor/skills/aby/SKILL.md`, `.cursor/rules/aby.mdc`). Keep PRD contact facts and links exact.
+Follow **Aby** (`.cursor/skills/aby/SKILL.md`, `.cursor/rules/aby.mdc`). Keep PRD contact facts and links exact. The current product UI is **dark glassmorphism** (documented in `CHANGELOG.md`); extend that system rather than reverting to earlier warm-beige layouts unless requested.
