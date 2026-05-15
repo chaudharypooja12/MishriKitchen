@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1604707761979-a52407f527b7?w=1920&h=1080&q=80&auto=format&fit=crop"
+        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=1080&q=80&auto=format&fit=crop"
         alt="L-shaped modular kitchen in warm wood tones - Mishri Kitchen & Home Interior"
         fill
         priority

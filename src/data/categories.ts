@@ -30,7 +30,7 @@ export const categories: Category[] = [
     description:
       "From compact parallel kitchens to statement islands — engineered for Delhi homes with durable materials and refined detailing.",
     accent: "ember",
-    heroImage: img("photo-1604707761979-a52407f527b7"),
+    heroImage: img("photo-1556909114-f6e7ad7d3136"),
     subcategories: [
       {
         id: "l-shaped",
@@ -87,7 +87,7 @@ export const categories: Category[] = [
       {
         id: "modern",
         name: "Modern Kitchen",
-        image: img("photo-1593062096033-37a5f451c922"),
+        image: img("photo-1600210492486-724fe5c67fb0"),
         description:
           "Handle-less profiles, crisp lines, and integrated appliances for a gallery-like kitchen.",
         benefits: ["Minimal visual noise", "Easy-clean surfaces", "Integrated appliances"],
@@ -96,7 +96,7 @@ export const categories: Category[] = [
       {
         id: "luxury",
         name: "Luxury Kitchen",
-        image: img("photo-1565538810643-baa0d52fbbdc"),
+        image: img("photo-1600607687939-ce8a6c25118c"),
         description:
           "Rich veneers, stone accents, and bespoke details for homes that demand a showroom finish.",
         benefits: ["Bespoke detailing", "Premium appliances", "Statement materials"],
@@ -125,7 +125,7 @@ export const categories: Category[] = [
       {
         id: "living",
         name: "Living Room",
-        image: img("photo-1581578731548-c64695cc6952"),
+        image: img("photo-1586023492125-27b2c045efd7"),
         description:
           "TV walls, display units, and seating layouts tuned for family life and entertaining.",
         benefits: ["Feature walls", "Concealed wiring", "Layered lighting"],
@@ -152,7 +152,7 @@ export const categories: Category[] = [
       {
         id: "study",
         name: "Study Room",
-        image: img("photo-1560448204-e02f11c3d0e2"),
+        image: img("photo-1497366216548-37526070297c"),
         description:
           "Focused work surfaces, book storage, and pin-up space for home offices.",
         benefits: ["Ergonomic desk height", "Task lighting", "Book walls"],
@@ -170,7 +170,7 @@ export const categories: Category[] = [
       {
         id: "dining",
         name: "Dining Room",
-        image: img("photo-1615876210569-4fede77a9224"),
+        image: img("photo-1600585154340-be6161a56a0c"),
         description:
           "Crockery units, buffet counters, and ceiling treatments that frame shared meals.",
         benefits: ["Display crockery", "Serving counters", "Warm lighting"],
@@ -185,7 +185,7 @@ export const categories: Category[] = [
     description:
       "Sliding, hinged, walk-in, and glass wardrobes tailored to ceiling heights and habits.",
     accent: "copper",
-    heroImage: img("photo-1631889990147-a6944581bcf5"),
+    heroImage: img("photo-1558618666-fcd25c85cd64"),
     subcategories: [
       {
         id: "sliding",
@@ -199,7 +199,7 @@ export const categories: Category[] = [
       {
         id: "walk-in",
         name: "Walk-in Wardrobes",
-        image: img("photo-1584622650110-044b00024cad"),
+        image: img("photo-1600566752355-35792bedcfea"),
         description:
           "Dressing islands, shoe walls, and open + closed storage for collector wardrobes.",
         benefits: ["Zoned storage", "Island dresser", "Accessory drawers"],

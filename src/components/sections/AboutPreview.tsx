@@ -11,7 +11,7 @@ export function AboutPreview() {
           <div className="glass-panel relative aspect-[4/5] overflow-hidden p-1">
             <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-xl)-4px)]">
               <Image
-                src="https://images.unsplash.com/photo-1604707761979-a52407f527b7?w=900&h=1100&q=80&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&h=1100&q=80&auto=format&fit=crop"
                 alt="Interior showroom kitchen detail - Mishri Kitchen & Home Interior"
                 fill
                 className="object-cover transition duration-700 hover:scale-105"

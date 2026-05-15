@@ -28,7 +28,7 @@ export const portfolioItems: PortfolioItem[] = [
     location: "Paschim Vihar",
     type: "Modular Kitchen",
     filter: "Kitchens",
-    image: u("photo-1604707761979-a52407f527b7"),
+    image: u("photo-1556909114-f6e7ad7d3136"),
     description: "Two-tone laminate with quartz counter and tall storage wall.",
     span: "wide",
   },
@@ -66,7 +66,7 @@ export const portfolioItems: PortfolioItem[] = [
     location: "Shalimar Bagh",
     type: "Wardrobe",
     filter: "Wardrobes",
-    image: u("photo-1584622650110-044b00024cad"),
+    image: u("photo-1600566752355-35792bedcfea"),
     description: "Floor-to-ceiling sliding doors with mirror insert.",
   },
   {
@@ -103,7 +103,7 @@ export const portfolioItems: PortfolioItem[] = [
     location: "Rajouri Garden",
     type: "Office Interiors",
     filter: "Office Interiors",
-    image: u("photo-1560448204-e02f11c3d0e2"),
+    image: u("photo-1497366216548-37526070297c"),
     description: "Floor-to-ceiling storage with reading nook.",
   },
   {
@@ -121,7 +121,7 @@ export const portfolioItems: PortfolioItem[] = [
     location: "Janakpuri",
     type: "Living Room",
     filter: "Living Rooms",
-    image: u("photo-1581578731548-c64695cc6952"),
+    image: u("photo-1586023492125-27b2c045efd7"),
     description: "Seamless flow between cooking and dining zones.",
   },
   {
