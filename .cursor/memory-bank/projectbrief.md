@@ -7,3 +7,5 @@
 **Design system (Aby):** Visual direction for this repo is **Aby** — see `.cursor/skills/aby/SKILL.md` and the always-on rule `.cursor/rules/aby.mdc`.
 
 **Full specification:** See [PRD.md](./PRD.md) for pages, components, design tokens, data file shapes, SEO, and launch checklist.
+
+**Agent workflow:** Before any change, read this file plus [CHANGELOG.md](./CHANGELOG.md) (and PRD when relevant). After changes, append to `CHANGELOG.md` and edit this brief if scope or stack shifts. See root [AGENTS.md](../../AGENTS.md) and [.cursor/rules/memory-bank.mdc](../rules/memory-bank.mdc).

@@ -1,0 +1,19 @@
+---
+description: Always use and maintain the project memory bank when planning or changing code
+alwaysApply: true
+---
+
+# Memory bank workflow (required)
+
+**Before** you plan or implement any user-requested change:
+
+1. Read [.cursor/memory-bank/projectbrief.md](.cursor/memory-bank/projectbrief.md) for goals, stack, and pointers.
+2. Read [.cursor/memory-bank/CHANGELOG.md](.cursor/memory-bank/CHANGELOG.md) for the latest shipped decisions and edits.
+3. Open [.cursor/memory-bank/PRD.md](.cursor/memory-bank/PRD.md) when the work touches routes, copy, CTAs, SEO, data shapes, or design tokens defined there.
+
+**After** you finish a substantive change (new feature, bugfix, refactor, dependency, or content update):
+
+1. Append a dated section to `CHANGELOG.md` (newest at top): what changed, which areas/files, and any follow-ups.
+2. If scope or stack shifted, update `projectbrief.md` in the same folder (keep it short).
+
+Do not skip updates when the user only asked for a “small” change — still log one line in `CHANGELOG.md` so the next session stays aligned.
