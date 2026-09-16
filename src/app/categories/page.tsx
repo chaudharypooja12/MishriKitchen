@@ -8,6 +8,14 @@ import { categoryAccentClass } from "@/lib/categoryAccent";
 import { pageMetadata } from "@/data/seo";
 import { cn } from "@/lib/utils";
 
+const keySafety = [
+  "Slimline edges",
+  "Rounded edges",
+  "No sharp edges",
+  "Fungus & bacterial proof",
+  "Children friendly",
+];
+
 export const metadata: Metadata = pageMetadata("categories");
 
 export default function CategoriesIndexPage() {
@@ -29,6 +37,16 @@ export default function CategoriesIndexPage() {
             Explore how we design modular kitchens, full interiors, wardrobes, and
             appliance packages — 14+ years of Mishri execution in Delhi NCR.
           </p>
+          <div className="mt-6 flex max-w-3xl flex-wrap gap-2">
+            {keySafety.map((f) => (
+              <span
+                key={f}
+                className="inline-flex items-center rounded-full border border-emerald-300/60 bg-emerald-50/80 px-3 py-1 text-xs font-semibold text-emerald-900"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -61,6 +79,16 @@ export default function CategoriesIndexPage() {
                     <p className="mt-4 flex-1 text-sm leading-relaxed text-text-muted">
                       {cat.description}
                     </p>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {cat.safetyFeatures.map((f) => (
+                        <span
+                          key={f}
+                          className="inline-flex items-center rounded-full border border-emerald-300/50 bg-emerald-50/70 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-900"
+                        >
+                          {f}
+                        </span>
+                      ))}
+                    </div>
                     <span className="mt-4 text-sm font-bold text-wood">
                       View details →
                     </span>

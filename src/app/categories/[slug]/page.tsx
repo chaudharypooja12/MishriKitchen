@@ -83,6 +83,16 @@ export default async function CategoryPage({
             14+ years designing and installing {category.title.toLowerCase()} across
             Delhi NCR.
           </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {category.safetyFeatures.map((f) => (
+              <span
+                key={f}
+                className="inline-flex items-center rounded-full border border-emerald-300/60 bg-emerald-50/80 px-3 py-1 text-xs font-semibold text-emerald-900"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -113,6 +123,30 @@ export default async function CategoryPage({
                   <p className="mt-4 text-base leading-relaxed text-text-muted">
                     {sub.description}
                   </p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {category.safetyFeatures.map((f) => (
+                      <span
+                        key={f}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/60 bg-emerald-50/80 px-3 py-1 text-xs font-semibold text-emerald-900"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2.5}
+                          className="size-3"
+                          aria-hidden="true"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 12.75 6 6 9-13.5"
+                          />
+                        </svg>
+                        {f}
+                      </span>
+                    ))}
+                  </div>
                   <h3 className="mt-8 text-sm font-bold uppercase tracking-wider text-wood">
                     Benefits
                   </h3>

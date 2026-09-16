@@ -16,8 +16,18 @@ export type Category = {
   description: string;
   heroImage: string;
   accent: CategoryAccent;
+  /** Client-mandated edge, safety, hygiene, and child-safety assurances. */
+  safetyFeatures: string[];
   subcategories: Subcategory[];
 };
+
+const safetyFeatures: string[] = [
+  "Slimline edges",
+  "Rounded edges",
+  "No sharp edges",
+  "Fungus and bacterial proof",
+  "Children friendly",
+];
 
 const img = (id: string) =>
   `https://images.unsplash.com/${id}?w=1200&h=800&q=80&auto=format&fit=crop`;
@@ -31,6 +41,7 @@ export const categories: Category[] = [
       "From compact parallel kitchens to statement islands — engineered for Delhi homes with durable materials and refined detailing.",
     accent: "ember",
     heroImage: img("photo-1600585154526-990dced4db0d"),
+    safetyFeatures,
     subcategories: [
       {
         id: "l-shaped",
@@ -42,6 +53,7 @@ export const categories: Category[] = [
           "Ideal for open plans",
           "Generous counter run",
           "Flexible tall unit placement",
+          "Child-safe rounded edges",
         ],
         materials: ["BWR ply", "Anti-bacterial laminate", "Soft-close hardware"],
       },
@@ -81,6 +93,7 @@ export const categories: Category[] = [
           "Efficient circulation",
           "Budget-smart",
           "Fast installation cycles",
+          "Slimline edges for narrow runs",
         ],
         materials: ["Compact laminates", "Space-saving hardware", "Tandem drawers"],
       },
@@ -90,7 +103,7 @@ export const categories: Category[] = [
         image: img("photo-1600210492486-724fe5c67fb0"),
         description:
           "Handle-less profiles, crisp lines, and integrated appliances for a gallery-like kitchen.",
-        benefits: ["Minimal visual noise", "Easy-clean surfaces", "Integrated appliances"],
+        benefits: ["Minimal visual noise", "Easy-clean surfaces", "Integrated appliances", "Slimline edge profiles"],
         materials: ["Matte & super-matt finishes", "Gola profiles", "LED profiles"],
       },
       {
@@ -108,7 +121,7 @@ export const categories: Category[] = [
         image: img("photo-1600566753190-17f0baa2a6c3"),
         description:
           "Every inch planned — wall cabinets, carousel units, and slim profiles for compact flats.",
-        benefits: ["Space-saving carousels", "Vertical storage", "Smart corners"],
+        benefits: ["Space-saving carousels", "Vertical storage", "Smart corners", "Slimline edges, no sharp corners"],
         materials: ["High-gloss laminates", "Slim tandem boxes", "Pull-out pantry"],
       },
     ],
@@ -121,6 +134,7 @@ export const categories: Category[] = [
       "Living, dining, bedrooms, and studies — cohesive palettes, lighting layers, and crafted joinery.",
     accent: "moss",
     heroImage: img("photo-1600585154340-be6161a56a0c"),
+    safetyFeatures,
     subcategories: [
       {
         id: "living",
@@ -155,7 +169,7 @@ export const categories: Category[] = [
         image: img("photo-1497366216548-37526070297c"),
         description:
           "Focused work surfaces, book storage, and pin-up space for home offices.",
-        benefits: ["Ergonomic desk height", "Task lighting", "Book walls"],
+        benefits: ["Ergonomic desk height", "Task lighting", "Book walls", "Rounded, child-safe corners"],
         materials: ["Matte laminates", "Pin-board panels", "Cable grommets"],
       },
       {
@@ -186,6 +200,7 @@ export const categories: Category[] = [
       "Sliding, hinged, walk-in, and glass wardrobes tailored to ceiling heights and habits.",
     accent: "copper",
     heroImage: img("photo-1558618666-fcd25c85cd64"),
+    safetyFeatures,
     subcategories: [
       {
         id: "sliding",
@@ -193,7 +208,7 @@ export const categories: Category[] = [
         image: img("photo-1600585154526-990dced4db0d"),
         description:
           "Smooth aluminium systems with soft-close and mirror options for tight bedrooms.",
-        benefits: ["No swing clearance", "Mirror options", "Large door panels"],
+        benefits: ["No swing clearance", "Mirror options", "Large door panels", "Child-friendly soft-close"],
         materials: ["Imported sliding systems", "Safety glass", "Anti-jump rollers"],
       },
       {
@@ -202,7 +217,7 @@ export const categories: Category[] = [
         image: img("photo-1600566752355-35792bedcfea"),
         description:
           "Dressing islands, shoe walls, and open + closed storage for collector wardrobes.",
-        benefits: ["Zoned storage", "Island dresser", "Accessory drawers"],
+        benefits: ["Zoned storage", "Island dresser", "Accessory drawers", "Rounded edges, children friendly"],
         materials: ["Leather handles", "Glass partitions", "Woodgrain laminates"],
       },
       {
@@ -233,6 +248,7 @@ export const categories: Category[] = [
       "Chimneys, cooktops, ovens, and microwaves — curated for Indian cooking with professional install.",
     accent: "indigo",
     heroImage: img("photo-1556912172-45b7abe8b7e1"),
+    safetyFeatures,
     subcategories: [
       {
         id: "chimneys",

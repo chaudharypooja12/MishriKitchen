@@ -20,6 +20,8 @@ export const services: Service[] = [
       "Premium branded hardware & soft-close",
       "Ergonomic workflow & maximised storage",
       "3D visualisation before execution",
+      "Slimline, rounded edges — no sharp edges",
+      "Child-safe, fungus & bacterial-proof finishes",
     ],
   },
   {
@@ -48,6 +50,7 @@ export const services: Service[] = [
       "Walk-in & glass door options",
       "Internal accessories & organisers",
       "Durable hardware for daily use",
+      "Rounded, child-safe edges",
     ],
   },
   {
@@ -84,12 +87,15 @@ export const services: Service[] = [
     title: "Material Selection",
     shortDesc: "Premium laminates, hardware & finishes",
     description:
-      "Guided selection of ISI-grade ply, laminates, edge bands, handles, and finishes that age gracefully.",
+      "Guided selection of ISI-grade ply, laminates, edge bands, handles, and finishes that age gracefully — with slimline, rounded edges and fungus/bacterial-proof surfaces as standard.",
     features: [
       "Ply grade consultation",
       "Laminate & colour curation",
       "Hardware durability checks",
       "Budget-transparent options",
+      "Slimline & rounded edge banding",
+      "Fungus and bacterial-proof surfaces",
+      "Children-friendly finish options",
     ],
   },
   {
