@@ -2,6 +2,10 @@
 
 Entries are **newest first**. Agents should read the latest entry before work and **append a new entry after** substantive edits.
 
+## 2026-09-16
+
+- **Tooling rename (`.cursor/` → `.freebuff/`):** The agent-config tree moved from `.cursor/` to `.freebuff/` (`memory-bank/`, `rules/`, `skills/aby/` — file contents unchanged, Git treats it as a pure rename). All live path references updated in `AGENTS.md`, `CLAUDE.md`, `README.md`, `SKILL.md`, `aby.mdc`, `memory-bank.mdc`, and `projectbrief.md`. Historical entries below keep their original `.cursor/` paths as dated history. Local-only `.freebuff/project-id` is gitignored.
+
 ## 2026-05-15
 
 - **Broken Unsplash (Home Interiors):** Replaced removed asset `photo-1600210491892-03d3c3494bfd` (404) with working URLs in [`categories.ts`](src/data/categories.ts) (interiors `heroImage` → `photo-1600585154340-be6161a56a0c`) and [`portfolio.ts`](src/data/portfolio.ts) (p3 living → `photo-1586023492125-27b2c045efd7`).

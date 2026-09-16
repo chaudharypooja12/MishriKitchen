@@ -1,12 +1,12 @@
 ---
 name: aby
-description: Aby — the Mishri Kitchen project design system (Neo Aurora: futuristic cool base + electric accents). Use for components, pages, styling, motion, and visual polish. Distinctive, production-grade UI; pairs with .cursor/memory-bank. Includes Web Interface Guidelines baseline.
+description: Aby — the Mishri Kitchen project design system (Neo Aurora: futuristic cool base + electric accents). Use for components, pages, styling, motion, and visual polish. Distinctive, production-grade UI; pairs with .freebuff/memory-bank. Includes Web Interface Guidelines baseline.
 license: Complete terms in LICENSE.txt
 ---
 
 ## Aby — project design system (Mishri Kitchen)
 
-**Aby** is the canonical design name for this repository. The live Mishri Kitchen product UI is **Neo Aurora** (see `globals.css`, `CHANGELOG.md`): cool luminous surfaces, electric accents, frosted chrome, and confident motion — not generic brown “AI wood.” Apply everything below to Mishri Kitchen UI. Use `.cursor/memory-bank/projectbrief.md` and `PRD.md` for routes, sitemap, business data, CTAs, and SEO; use **Aby** for look-and-feel unless a PRD item is a hard client requirement (e.g. exact legal line, verified contact).
+**Aby** is the canonical design name for this repository. The live Mishri Kitchen product UI is **Neo Aurora** (see `globals.css`, `CHANGELOG.md`): cool luminous surfaces, electric accents, frosted chrome, and confident motion — not generic brown “AI wood.” Apply everything below to Mishri Kitchen UI. Use `.freebuff/memory-bank/projectbrief.md` and `PRD.md` for routes, sitemap, business data, CTAs, and SEO; use **Aby** for look-and-feel unless a PRD item is a hard client requirement (e.g. exact legal line, verified contact).
 
 ---
 

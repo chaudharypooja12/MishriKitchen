@@ -7,9 +7,9 @@ alwaysApply: true
 
 **Before** you plan or implement any user-requested change:
 
-1. Read [.cursor/memory-bank/projectbrief.md](.cursor/memory-bank/projectbrief.md) for goals, stack, and pointers.
-2. Read [.cursor/memory-bank/CHANGELOG.md](.cursor/memory-bank/CHANGELOG.md) for the latest shipped decisions and edits.
-3. Open [.cursor/memory-bank/PRD.md](.cursor/memory-bank/PRD.md) when the work touches routes, copy, CTAs, SEO, data shapes, or design tokens defined there.
+1. Read [.freebuff/memory-bank/projectbrief.md](.freebuff/memory-bank/projectbrief.md) for goals, stack, and pointers.
+2. Read [.freebuff/memory-bank/CHANGELOG.md](.freebuff/memory-bank/CHANGELOG.md) for the latest shipped decisions and edits.
+3. Open [.freebuff/memory-bank/PRD.md](.freebuff/memory-bank/PRD.md) when the work touches routes, copy, CTAs, SEO, data shapes, or design tokens defined there.
 
 **After** you finish a substantive change (new feature, bugfix, refactor, dependency, or content update):
 
