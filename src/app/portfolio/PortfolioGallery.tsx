@@ -53,7 +53,7 @@ export function PortfolioGallery() {
             Portfolio
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
-            Kitchens, living spaces, wardrobes, and more — 14+ years of Mishri
+            Kitchens, living spaces, wardrobes, and more — 14+ years of Misri
             rigour across Delhi NCR.
           </p>
         </div>
@@ -99,7 +99,7 @@ export function PortfolioGallery() {
                 >
                   <Image
                     src={p.image}
-                    alt={`${p.title} - Mishri Kitchen & Home Interior`}
+                    alt={`${p.title} - Misri Kitchen & Home Interior`}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"

@@ -67,7 +67,7 @@ export function Navbar() {
             href="/"
             className="font-display bg-gradient-to-r from-cyan-600 via-fuchsia-600 to-violet-700 bg-clip-text text-lg font-bold tracking-tight text-transparent md:text-xl"
           >
-            Mishri Kitchen
+            Misri Kitchen
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">

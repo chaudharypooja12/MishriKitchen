@@ -50,7 +50,7 @@ export function ProjectsCarousel() {
             <SectionHeader
               label="Portfolio"
               title="Featured transformations"
-              subtitle="A glimpse of recent kitchens and interiors from 14+ years of Mishri work across Delhi."
+              subtitle="A glimpse of recent kitchens and interiors from 14+ years of Misri work across Delhi."
             />
           </FadeIn>
           <div className="flex items-center justify-between gap-3 md:justify-end">
@@ -86,7 +86,7 @@ export function ProjectsCarousel() {
                   <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-lg)-2px)]">
                     <Image
                       src={p.image}
-                      alt={`${p.title} - Mishri Kitchen & Home Interior`}
+                      alt={`${p.title} - Misri Kitchen & Home Interior`}
                       fill
                       className="object-cover transition duration-500 hover:scale-105"
                       sizes="(max-width: 640px) 88vw, 33vw"

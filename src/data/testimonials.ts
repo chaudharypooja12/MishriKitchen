@@ -70,7 +70,7 @@ export const testimonialsPage: Testimonial[] = [
   {
     id: "7",
     quote:
-      "Attention to detail is rare — Mishri Kitchen delivered exactly what was promised on renderings.",
+      "Attention to detail is rare — Misri Kitchen delivered exactly what was promised on renderings.",
     name: "Kavita Menon",
     location: "Dwarka",
     projectType: "U-Shaped Kitchen",

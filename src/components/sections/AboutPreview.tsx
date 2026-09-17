@@ -12,7 +12,7 @@ export function AboutPreview() {
             <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-xl)-4px)]">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=1100&q=80&auto=format&fit=crop"
-                alt="Bright open-plan living and kitchen interior by Mishri Kitchen & Home Interior, Delhi NCR"
+                alt="Bright open-plan living and kitchen interior by Misri Kitchen & Home Interior, Delhi NCR"
                 fill
                 className="object-cover transition duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -24,7 +24,7 @@ export function AboutPreview() {
           <SectionHeader
             label="Our story"
             title="Delhi craftsmanship with a personal touch"
-            subtitle="Led by Sandeep Singh, Mishri Kitchen blends rigorous site planning with warm materials — so your home feels considered, not catalogued."
+            subtitle="Led by Sandeep Singh, Misri Kitchen blends rigorous site planning with warm materials — so your home feels considered, not catalogued."
           />
           <ul className="mt-8 space-y-4 text-text-muted">
             <li className="flex gap-3">

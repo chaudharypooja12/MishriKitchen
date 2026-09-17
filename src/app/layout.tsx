@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Premium Modular Kitchen & Home Interiors in Delhi | Mishri Kitchen",
-    template: "%s | Mishri Kitchen",
+      "Premium Modular Kitchen & Home Interiors in Delhi | Misri Kitchen",
+    template: "%s | Misri Kitchen",
   },
   description:
-    "Mishri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 14+ years of experience, 100+ projects. Book a free consultation.",
+    "Misri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 14+ years of experience, 100+ projects. Book a free consultation.",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "Mishri Kitchen & Home Interior",
+    siteName: "Misri Kitchen & Home Interior",
     url: SITE_URL,
   },
 };

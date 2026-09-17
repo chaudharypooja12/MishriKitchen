@@ -24,6 +24,6 @@ export const CONTACT = {
   },
   factory: "Peeragarhi Industrial Area, New Delhi – 110087",
   hours: "Mon–Sat: 10:00 AM – 7:00 PM",
-  brandName: "Mishri Kitchen & Home Interior",
+  brandName: "Misri Kitchen & Home Interior",
   founder: "Sandeep Singh",
 } as const;

@@ -17,12 +17,12 @@ const entries: Record<SeoKey, { title: string; description: string }> = {
   home: {
     title: "Premium Modular Kitchen & Home Interiors in Delhi",
     description:
-      "Mishri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 14+ years of experience, 100+ projects. Book a free consultation.",
+      "Misri Kitchen offers modular kitchens, wardrobe designs & home interiors in Paschim Vihar, Delhi. 14+ years of experience, 100+ projects. Book a free consultation.",
   },
   about: {
-    title: "About Us — Mishri Kitchen & Home Interior Delhi",
+    title: "About Us — Misri Kitchen & Home Interior Delhi",
     description:
-      "Learn about Mishri Kitchen's 14-year journey designing premium modular kitchens and home interiors across Delhi NCR.",
+      "Learn about Misri Kitchen's 14-year journey designing premium modular kitchens and home interiors across Delhi NCR.",
   },
   services: {
     title: "Modular Kitchen & Interior Design Services — Delhi",
@@ -30,24 +30,24 @@ const entries: Record<SeoKey, { title: string; description: string }> = {
       "Explore our modular kitchen, wardrobe, interior design, appliance & project management services in New Delhi — 14+ years of trusted execution.",
   },
   portfolio: {
-    title: "Kitchen & Interior Portfolio — Mishri Kitchen Delhi",
+    title: "Kitchen & Interior Portfolio — Misri Kitchen Delhi",
     description:
-      "Browse our completed modular kitchen and home interior projects across Delhi NCR — 14+ years of Mishri craftsmanship.",
+      "Browse our completed modular kitchen and home interior projects across Delhi NCR — 14+ years of Misri craftsmanship.",
   },
   reviews: {
-    title: "Customer Reviews — Mishri Kitchen Delhi",
+    title: "Customer Reviews — Misri Kitchen Delhi",
     description:
-      "See what 100+ happy families say about Mishri Kitchen & Home Interior's quality and service — 14+ years in Delhi NCR.",
+      "See what 100+ happy families say about Misri Kitchen & Home Interior's quality and service — 14+ years in Delhi NCR.",
   },
   contact: {
-    title: "Contact Mishri Kitchen — Paschim Vihar, New Delhi",
+    title: "Contact Misri Kitchen — Paschim Vihar, New Delhi",
     description:
-      "Visit or call Mishri Kitchen at Shop No.14, Garg Plaza, Bhera Enclave, Paschim Vihar, New Delhi. 14+ years of modular kitchen & interior experience. Mon–Sat 10AM–7PM.",
+      "Visit or call Misri Kitchen at Shop No.14, Garg Plaza, Bhera Enclave, Paschim Vihar, New Delhi. 14+ years of modular kitchen & interior experience. Mon–Sat 10AM–7PM.",
   },
   categories: {
-    title: "Categories — Mishri Kitchen Delhi",
+    title: "Categories — Misri Kitchen Delhi",
     description:
-      "Modular kitchens, home interiors, wardrobes, and kitchen appliances by Mishri Kitchen — 14+ years across Delhi NCR.",
+      "Modular kitchens, home interiors, wardrobes, and kitchen appliances by Misri Kitchen — 14+ years across Delhi NCR.",
   },
   categoryModular: {
     title: "Modular Kitchen Designs — L-shape, U-shape, Island",
@@ -55,9 +55,9 @@ const entries: Record<SeoKey, { title: string; description: string }> = {
       "Premium modular kitchen designs in Delhi — 14+ years of installs. L-shaped, U-shaped, island, parallel & luxury kitchens. Custom quotes available.",
   },
   categoryInteriors: {
-    title: "Home Interior Design — Mishri Kitchen Delhi",
+    title: "Home Interior Design — Misri Kitchen Delhi",
     description:
-      "Living rooms, bedrooms, TV units, and full home interiors crafted for Delhi homes — 14+ years of Mishri delivery.",
+      "Living rooms, bedrooms, TV units, and full home interiors crafted for Delhi homes — 14+ years of Misri delivery.",
   },
   categoryWardrobes: {
     title: "Wardrobe Design — Sliding, Hinged, Walk-in",
@@ -65,7 +65,7 @@ const entries: Record<SeoKey, { title: string; description: string }> = {
       "Smart wardrobe solutions with premium finishes across Delhi NCR — 14+ years of fitted storage expertise.",
   },
   categoryAppliances: {
-    title: "Kitchen Appliances — Mishri Kitchen Delhi",
+    title: "Kitchen Appliances — Misri Kitchen Delhi",
     description:
       "Chimneys, cooktops, microwaves, ovens — supply and professional installation from a team with 14+ years on site.",
   },

@@ -48,7 +48,7 @@ export default async function CategoryPage({
       <section className="relative h-[42vh] min-h-[280px] border-b border-border">
         <Image
           src={category.heroImage}
-          alt={`${category.title} - Mishri Kitchen & Home Interior`}
+          alt={`${category.title} - Misri Kitchen & Home Interior`}
           fill
           priority
           className="object-cover"
@@ -109,7 +109,7 @@ export default async function CategoryPage({
                   <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-lg)-2px)]">
                     <Image
                       src={sub.image}
-                      alt={`${sub.name} - Mishri Kitchen & Home Interior`}
+                      alt={`${sub.name} - Misri Kitchen & Home Interior`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"

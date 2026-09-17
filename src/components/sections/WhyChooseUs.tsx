@@ -9,7 +9,7 @@ export function WhyChooseUs() {
       <div className="mx-auto max-w-6xl px-4">
         <FadeIn>
           <SectionHeader
-            label="Why Mishri"
+            label="Why Misri"
             title="Why families choose us"
             subtitle="Four pillars we have sharpened over 14+ years of live projects in Delhi NCR."
             align="center"

@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&h=900&q=80&auto=format&fit=crop"
-            alt="Contemporary home interior and open kitchen by Mishri Kitchen & Home Interior"
+            alt="Contemporary home interior and open kitchen by Misri Kitchen & Home Interior"
             fill
             className="object-cover opacity-45"
             priority
@@ -38,7 +38,7 @@ export default function AboutPage() {
             className="mb-8"
           />
           <h1 className="font-display text-4xl font-bold text-wood-dark md:text-5xl">
-            About Mishri Kitchen & Home Interior
+            About Misri Kitchen & Home Interior
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
             A Delhi studio obsessed with honest materials, clear timelines, and
@@ -50,9 +50,9 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <FadeIn>
           <SectionHeader
-            label="Story"
+            label="Story — built on site experience"
             title="Built on site experience, not showroom promises"
-            subtitle="Mishri began as a small workshop serving Paschim Vihar neighbours. Today we design across Delhi NCR — still with the same hands-on founder oversight."
+            subtitle="Misri began as a small workshop serving Paschim Vihar neighbours. Today we design across Delhi NCR — still with the same hands-on founder oversight."
           />
         </FadeIn>
         <div className="mt-10 space-y-6 text-base leading-relaxed text-text-muted">
@@ -63,8 +63,9 @@ export default function AboutPage() {
             for second and third phases.
           </p>
           <p>
-            Under {CONTACT.founder}, our team coordinates carpentry, electrical
-            touchpoints, and appliance installs so you are not chasing vendors.
+            Under {CONTACT.founder}, our team coordinates the full scope on site —
+            carpentry, plumbing, civil work, electrical, painting, and appliance
+            installation — so you are not chasing vendors.
           </p>
         </div>
       </section>
@@ -74,10 +75,10 @@ export default function AboutPage() {
           <FadeIn>
             <SectionHeader
               label="Philosophy"
-              title="Precision, quality, personalisation"
+              title="Precision, quality, personalisation & more"
             />
           </FadeIn>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Precision",
@@ -90,6 +91,14 @@ export default function AboutPage() {
               {
                 title: "Personalisation",
                 body: "Your habits drive storage, not a catalogue module list.",
+              },
+              {
+                title: "Proper use of space",
+                body: "Every square foot planned — corners, verticals, and odd niches put to work.",
+              },
+              {
+                title: "Modulation",
+                body: "Smart modular units that adapt, extend, and reconfigure as your needs change.",
               },
             ].map((p, i) => (
               <FadeIn key={p.title} delay={i * 0.06}>

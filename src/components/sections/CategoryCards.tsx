@@ -56,7 +56,7 @@ export function CategoryCards() {
         >
           <Image
             src={cat.heroImage}
-            alt={`${cat.title} - Mishri Kitchen & Home Interior`}
+            alt={`${cat.title} - Misri Kitchen & Home Interior`}
             fill
             className="object-cover transition duration-700 group-hover:scale-105"
             sizes="(max-width: 768px) 90vw, 50vw"

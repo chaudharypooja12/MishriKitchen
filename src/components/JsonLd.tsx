@@ -6,7 +6,7 @@ export function JsonLd() {
     "@type": "LocalBusiness",
     name: CONTACT.brandName,
     description:
-      "Premium modular kitchen and home interior design in Delhi NCR — 14+ years of trusted Mishri Kitchen experience.",
+      "Premium modular kitchen and home interior design in Delhi NCR — 14+ years of trusted Misri Kitchen experience.",
     url: SITE_URL,
     telephone: CONTACT.phone1,
     address: {

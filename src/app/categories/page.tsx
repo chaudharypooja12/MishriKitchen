@@ -35,7 +35,7 @@ export default function CategoriesIndexPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-text-muted">
             Explore how we design modular kitchens, full interiors, wardrobes, and
-            appliance packages — 14+ years of Mishri execution in Delhi NCR.
+            appliance packages — 14+ years of Misri execution in Delhi NCR.
           </p>
           <div className="mt-6 flex max-w-3xl flex-wrap gap-2">
             {keySafety.map((f) => (

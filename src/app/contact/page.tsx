@@ -112,7 +112,7 @@ export default function ContactPage() {
 
         <div className="glass-panel mt-12 overflow-hidden p-1">
           <iframe
-            title="Mishri Kitchen location map"
+            title="Misri Kitchen location map"
             src={CONTACT.mapsEmbed}
             className="h-[min(500px,60vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-bg-deep md:h-[500px]"
             loading="lazy"

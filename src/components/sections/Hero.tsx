@@ -15,7 +15,7 @@ export function Hero() {
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
         src={HERO_IMAGE}
-        alt="Contemporary modular kitchen with island and premium finishes — Mishri Kitchen & Home Interior, Delhi NCR"
+        alt="Contemporary modular kitchen with island and premium finishes — Misri Kitchen & Home Interior, Delhi NCR"
         fill
         priority
         className="object-cover object-center"

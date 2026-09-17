@@ -16,7 +16,7 @@ export function GoogleMapSection() {
         </FadeIn>
         <div className="glass-panel mt-10 overflow-hidden p-1">
           <iframe
-            title="Mishri Kitchen on Google Maps"
+            title="Misri Kitchen on Google Maps"
             src={CONTACT.mapsEmbed}
             className="h-[min(400px,55vh)] w-full rounded-[calc(var(--radius-xl)-4px)] bg-bg-deep md:h-[400px]"
             loading="lazy"

@@ -1,4 +1,4 @@
-# Mishri Kitchen & Home Interior
+# Misri Kitchen & Home Interior
 
 Static informational site (Next.js App Router) for modular kitchens and interiors in Delhi — see [.freebuff/memory-bank/PRD.md](.freebuff/memory-bank/PRD.md) for the full product spec.
 
