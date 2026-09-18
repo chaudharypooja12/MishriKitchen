@@ -5,8 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { heroStats } from "@/data/stats";
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&h=1080&q=80&auto=format&fit=crop";
+const HERO_IMAGE = "/images/Kitchen_4.jpeg";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -15,7 +14,7 @@ export function Hero() {
     <section className="relative min-h-[100svh] overflow-hidden">
       <Image
         src={HERO_IMAGE}
-        alt="Contemporary modular kitchen with island and premium finishes — Misri Kitchen & Home Interior, Delhi NCR"
+        alt="Champagne-gold modular kitchen by Misri Kitchen & Home Interior, Delhi NCR"
         fill
         priority
         className="object-cover object-center"

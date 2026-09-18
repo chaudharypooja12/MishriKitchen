@@ -2,6 +2,11 @@
 
 Entries are **newest first**. Agents should read the latest entry before work and **append a new entry after** substantive edits.
 
+## 2026-09-18
+
+- **Portfolio removal + Founder section:** Deleted the `/portfolio` routes and `PortfolioGallery.tsx`; added [`Founder.tsx`](src/components/sections/Founder.tsx) (new founder module) to the home page. Reworked [`Testimonials.tsx`](src/components/sections/Testimonials.tsx), [`portfolio.ts`](src/data/portfolio.ts), [`categories.ts`](src/data/categories.ts), and trimmed SEO entries/hooks in [`seo.ts`](src/data/seo.ts). Nav/Footer/About page/Hero copy updated to match. Portfolio imagery now served from local [`public/images/`](public/images/) instead of Unsplash.
+- **Workspace tooling:** Added `.freebuff/tools/` (portable Node runtime used to run the dev server, plus its nested `node_modules`), `.freebuff/run.md`, `.freebuff/preview-launch.ps1`, and preview server logs.
+
 ## 2026-09-16
 
 - **Tooling rename (`.cursor/` → `.freebuff/`):** The agent-config tree moved from `.cursor/` to `.freebuff/` (`memory-bank/`, `rules/`, `skills/aby/` — file contents unchanged, Git treats it as a pure rename). All live path references updated in `AGENTS.md`, `CLAUDE.md`, `README.md`, `SKILL.md`, `aby.mdc`, `memory-bank.mdc`, and `projectbrief.md`. Historical entries below keep their original `.cursor/` paths as dated history. Local-only `.freebuff/project-id` is gitignored.

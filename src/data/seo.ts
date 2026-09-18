@@ -4,7 +4,6 @@ export type SeoKey =
   | "home"
   | "about"
   | "services"
-  | "portfolio"
   | "reviews"
   | "contact"
   | "categories"
@@ -28,11 +27,6 @@ const entries: Record<SeoKey, { title: string; description: string }> = {
     title: "Modular Kitchen & Interior Design Services — Delhi",
     description:
       "Explore our modular kitchen, wardrobe, interior design, appliance & project management services in New Delhi — 14+ years of trusted execution.",
-  },
-  portfolio: {
-    title: "Kitchen & Interior Portfolio — Misri Kitchen Delhi",
-    description:
-      "Browse our completed modular kitchen and home interior projects across Delhi NCR — 14+ years of Misri craftsmanship.",
   },
   reviews: {
     title: "Customer Reviews — Misri Kitchen Delhi",

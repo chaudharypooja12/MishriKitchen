@@ -32,6 +32,8 @@ const safetyFeatures: string[] = [
 const img = (id: string) =>
   `https://images.unsplash.com/${id}?w=1200&h=800&q=80&auto=format&fit=crop`;
 
+const local = (name: string) => `/images/${name}`;
+
 export const categories: Category[] = [
   {
     slug: "modular-kitchen",
@@ -40,13 +42,13 @@ export const categories: Category[] = [
     description:
       "From compact parallel kitchens to statement islands — engineered for Delhi homes with durable materials and refined detailing.",
     accent: "ember",
-    heroImage: img("photo-1600585154526-990dced4db0d"),
+    heroImage: local("Kitchen_4.jpeg"),
     safetyFeatures,
     subcategories: [
       {
         id: "l-shaped",
         name: "L-Shaped Kitchen",
-        image: img("photo-1600566753190-17f0baa2a6c3"),
+        image: local("Kitchen_1.jpeg"),
         description:
           "Classic L layouts maximise corner space while keeping the work triangle efficient for daily cooking.",
         benefits: [
@@ -60,7 +62,7 @@ export const categories: Category[] = [
       {
         id: "u-shaped",
         name: "U-Shaped Kitchen",
-        image: img("photo-1600585154340-be6161a56a0c"),
+        image: local("Kitchen_2.jpeg"),
         description:
           "Maximum storage and counter space on three sides — perfect for passionate home cooks.",
         benefits: [
@@ -86,7 +88,7 @@ export const categories: Category[] = [
       {
         id: "parallel",
         name: "Parallel Kitchen",
-        image: img("photo-1556911220-e15b29be8c8f"),
+        image: local("Kitchen_5.jpeg"),
         description:
           "Two sleek runs facing each other — the smart choice for narrow Delhi galley spaces.",
         benefits: [
@@ -100,7 +102,7 @@ export const categories: Category[] = [
       {
         id: "modern",
         name: "Modern Kitchen",
-        image: img("photo-1600210492486-724fe5c67fb0"),
+        image: local("Kitchen_3.jpeg"),
         description:
           "Handle-less profiles, crisp lines, and integrated appliances for a gallery-like kitchen.",
         benefits: ["Minimal visual noise", "Easy-clean surfaces", "Integrated appliances", "Slimline edge profiles"],
@@ -109,7 +111,7 @@ export const categories: Category[] = [
       {
         id: "luxury",
         name: "Luxury Kitchen",
-        image: img("photo-1600607687939-ce8a6c25118c"),
+        image: local("Kitchen_4.jpeg"),
         description:
           "Rich veneers, stone accents, and bespoke details for homes that demand a showroom finish.",
         benefits: ["Bespoke detailing", "Premium appliances", "Statement materials"],
@@ -118,7 +120,7 @@ export const categories: Category[] = [
       {
         id: "compact",
         name: "Compact Kitchen",
-        image: img("photo-1600566753190-17f0baa2a6c3"),
+        image: img("photo-1600607687939-ce8a6c25118c"),
         description:
           "Every inch planned — wall cabinets, carousel units, and slim profiles for compact flats.",
         benefits: ["Space-saving carousels", "Vertical storage", "Smart corners", "Slimline edges, no sharp corners"],
@@ -133,7 +135,7 @@ export const categories: Category[] = [
     description:
       "Living, dining, bedrooms, and studies — cohesive palettes, lighting layers, and crafted joinery.",
     accent: "moss",
-    heroImage: img("photo-1600585154340-be6161a56a0c"),
+    heroImage: local("Bedroom_1.jpeg"),
     safetyFeatures,
     subcategories: [
       {
@@ -148,7 +150,7 @@ export const categories: Category[] = [
       {
         id: "bedroom",
         name: "Bedroom",
-        image: img("photo-1615529328331-f8917597711f"),
+        image: local("Bedroom_1.jpeg"),
         description:
           "Bed back walls, wardrobes, and bedside niches for calm, clutter-free bedrooms.",
         benefits: ["Integrated storage", "Mood lighting", "Acoustic comfort"],
@@ -184,7 +186,7 @@ export const categories: Category[] = [
       {
         id: "dining",
         name: "Dining Room",
-        image: img("photo-1600585154340-be6161a56a0c"),
+        image: local("Kitchen_6.jpeg"),
         description:
           "Crockery units, buffet counters, and ceiling treatments that frame shared meals.",
         benefits: ["Display crockery", "Serving counters", "Warm lighting"],
@@ -199,13 +201,13 @@ export const categories: Category[] = [
     description:
       "Sliding, hinged, walk-in, and glass wardrobes tailored to ceiling heights and habits.",
     accent: "copper",
-    heroImage: img("photo-1558618666-fcd25c85cd64"),
+    heroImage: local("Wardrobe_3.jpeg"),
     safetyFeatures,
     subcategories: [
       {
         id: "sliding",
         name: "Sliding Wardrobes",
-        image: img("photo-1600585154526-990dced4db0d"),
+        image: img("photo-1558618666-fcd25c85cd64"),
         description:
           "Smooth aluminium systems with soft-close and mirror options for tight bedrooms.",
         benefits: ["No swing clearance", "Mirror options", "Large door panels", "Child-friendly soft-close"],
@@ -223,7 +225,7 @@ export const categories: Category[] = [
       {
         id: "hinged",
         name: "Hinged Wardrobes",
-        image: img("photo-1616594039964-ae9021a400a0"),
+        image: local("Wardrobe_2.jpeg"),
         description:
           "Classic swing doors with internal fittings — ties, trays, and long-hang zones.",
         benefits: ["Full access opening", "Internal accessories", "Quiet hinges"],
@@ -232,7 +234,7 @@ export const categories: Category[] = [
       {
         id: "glass-door",
         name: "Glass Door",
-        image: img("photo-1600210492486-724fe5c67fb0"),
+        image: local("Wardrobe_4.jpeg"),
         description:
           "Tinted or clear glass fronts for display wardrobes in master suites.",
         benefits: ["Visual lightness", "Display mode", "Premium feel"],

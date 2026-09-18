@@ -11,8 +11,8 @@ export function AboutPreview() {
           <div className="glass-panel relative aspect-[4/5] overflow-hidden p-1">
             <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-xl)-4px)]">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=1100&q=80&auto=format&fit=crop"
-                alt="Bright open-plan living and kitchen interior by Misri Kitchen & Home Interior, Delhi NCR"
+                src="/images/shop-front.png"
+                alt="Misri Kitchen & Home Interior shop front, Paschim Vihar, Delhi NCR"
                 fill
                 className="object-cover transition duration-700 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"

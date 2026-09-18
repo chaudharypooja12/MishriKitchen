@@ -11,8 +11,6 @@ const primaryNav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/reviews", label: "Reviews" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -71,7 +69,7 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">
-            {primaryNav.slice(0, 4).map((item) => (
+            {primaryNav.slice(0, 3).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -115,7 +113,7 @@ export function Navbar() {
               )}
             </div>
 
-            {primaryNav.slice(4).map((item) => (
+            {primaryNav.slice(3).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

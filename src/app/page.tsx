@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AboutPreview } from "@/components/sections/AboutPreview";
 import { CategoryCards } from "@/components/sections/CategoryCards";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { FounderSection } from "@/components/sections/Founder";
 import { GoogleMapSection } from "@/components/sections/GoogleMapSection";
 import { Hero } from "@/components/sections/Hero";
 import { ProjectsCarousel } from "@/components/sections/ProjectsCarousel";
@@ -17,6 +18,7 @@ export default function HomePage() {
     <>
       <Hero />
       <AboutPreview />
+      <FounderSection />
       <ServicesGrid />
       <CategoryCards />
       <ProjectsCarousel />

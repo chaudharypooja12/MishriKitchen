@@ -124,8 +124,8 @@ export function ProjectsCarousel() {
         </div>
 
         <div className="mt-10 flex justify-center md:justify-start">
-          <Button href="/portfolio" variant="secondary">
-            View all projects →
+          <Button href="/categories" variant="secondary">
+            Explore our categories →
           </Button>
         </div>
       </div>

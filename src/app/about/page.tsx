@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { FounderSection } from "@/components/sections/Founder";
 import { CONTACT } from "@/lib/constants";
 import { heroStats } from "@/data/stats";
 import { pageMetadata } from "@/data/seo";
@@ -24,8 +25,8 @@ export default function AboutPage() {
       <section className="relative border-b border-fuchsia-200/40 bg-gradient-to-br from-cyan-50 via-white to-violet-50 py-16 md:py-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&h=900&q=80&auto=format&fit=crop"
-            alt="Contemporary home interior and open kitchen by Misri Kitchen & Home Interior"
+            src="/images/Kitchen_6.jpeg"
+            alt="Fluted crockery unit and dining counter by Misri Kitchen & Home Interior"
             fill
             className="object-cover opacity-45"
             priority
@@ -114,32 +115,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <FadeIn>
-            <div className="glass-panel relative aspect-square overflow-hidden p-1">
-              <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius-xl)-4px)]">
-                <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&q=80&auto=format&fit=crop"
-                  alt={CONTACT.founder}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.08}>
-            <SectionHeader
-              label="Founder"
-              title={`A note from ${CONTACT.founder}`}
-            />
-            <blockquote className="mt-6 border-l-4 border-gold pl-6 text-lg italic leading-relaxed text-text">
-              &ldquo;We do not chase volume — we chase referrals. That only happens
-              when the last 5% of finishing is as tight as the first drawing.&rdquo;
-            </blockquote>
-          </FadeIn>
-        </div>
-      </section>
+      <FounderSection />
 
       <section className="section-band-teal border-y border-teal-200/40 py-16 backdrop-blur-sm md:py-24">
         <div className="mx-auto max-w-6xl px-4">
