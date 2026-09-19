@@ -8,8 +8,9 @@ import { pageMetadata } from "@/data/seo";
 export const metadata: Metadata = pageMetadata("contact");
 
 const hours = [
-  { day: "Monday – Saturday", hours: "10:00 AM – 7:00 PM" },
-  { day: "Sunday", hours: "By Appointment" },
+  { day: "Monday – Tuesday", hours: "10:00 AM – 7:00 PM" },
+  { day: "Wednesday", hours: "Closed — weekly off for office visits" },
+  { day: "Thursday – Sunday", hours: "10:00 AM – 7:00 PM" },
 ];
 
 export default function ContactPage() {
@@ -99,6 +100,9 @@ export default function ContactPage() {
                 ))}
               </tbody>
             </table>
+            <p className="mt-3 text-xs font-medium text-accent-coral">
+              {CONTACT.weeklyOffNote}
+            </p>
           </FadeIn>
           <FadeIn delay={0.06}>
             <h2 className="font-display text-2xl font-bold text-wood-dark">
@@ -125,7 +129,8 @@ export default function ContactPage() {
             Ready to start your project?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm text-indigo-100/95">
-            Our team is available Mon–Sat, 10 AM – 7 PM. Walk in or call ahead.
+            Our team is available every day except Wednesday, 10 AM – 7 PM. Walk
+            in or call ahead — Wednesday is our weekly off for office visits.
           </p>
           <div className="mt-8 flex flex-col flex-wrap justify-center gap-4 sm:flex-row">
             <Button href="/contact" variant="primary">

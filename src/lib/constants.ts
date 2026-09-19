@@ -23,7 +23,10 @@ export const CONTACT = {
     pin: "110087",
   },
   factory: "Peeragarhi Industrial Area, New Delhi – 110087",
-  hours: "Mon–Sat: 10:00 AM – 7:00 PM",
+  hours: "Open all days except Wednesday: 10:00 AM – 7:00 PM",
+  weeklyOff: "Wednesday: closed for office visits",
+  weeklyOffNote:
+    "We are open every day of the week except Wednesday — that is our weekly off for office visits. Calls and WhatsApp stay open.",
   brandName: "Misri Kitchen & Home Interior",
   founder: "Sandeep Singh",
 } as const;

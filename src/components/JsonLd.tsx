@@ -25,13 +25,14 @@ export function JsonLd() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
+        // Open every day except Wednesday — the weekly off for office visits
         dayOfWeek: [
           "Monday",
           "Tuesday",
-          "Wednesday",
           "Thursday",
           "Friday",
           "Saturday",
+          "Sunday",
         ],
         opens: "10:00",
         closes: "19:00",

@@ -85,6 +85,9 @@ export function Footer() {
             {CONTACT.address.city} – {CONTACT.address.pin}
           </p>
           <p className="mt-3 text-sm text-text-muted">{CONTACT.hours}</p>
+          <p className="mt-1 text-xs font-semibold text-accent-coral">
+            {CONTACT.weeklyOff}
+          </p>
         </div>
       </div>
 
