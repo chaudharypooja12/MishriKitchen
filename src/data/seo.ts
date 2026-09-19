@@ -36,7 +36,7 @@ const entries: Record<SeoKey, { title: string; description: string }> = {
   contact: {
     title: "Contact Misri Kitchen — Paschim Vihar, New Delhi",
     description:
-      "Visit or call Misri Kitchen at Shop No.14, Garg Plaza, Bhera Enclave, Paschim Vihar, New Delhi. 14+ years of modular kitchen & interior experience. Open every day except Wednesday, 10AM–7PM.",
+      "Visit or call Misri Kitchen at Shop No.14, Garg Plaza, Bhera Enclave, Paschim Vihar, New Delhi. 14+ years of modular kitchen & interior experience. Open all days of the week except Wednesday, 10AM–7PM.",
   },
   categories: {
     title: "Categories — Misri Kitchen Delhi",
